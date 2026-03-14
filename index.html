@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stay Fresh Ent. | Barber Shop · St. Charles, MO</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--purple:#5B2D8E;--purple2:#7B4DB5;--lime:#B8FF57;--dark:#0A0A0F;--dark2:#111118;--dark3:#18181F;--white:#F0EFF5;--gray:#7A7A8C;--border:rgba(91,45,142,0.25)}
+body{cursor:none;background:var(--dark);color:var(--white);font-family:'Space Grotesk',sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;padding:0 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,15,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.logo{font-family:'Space Mono',monospace;font-weight:700;font-size:1.1rem;color:var(--white);letter-spacing:1px}
+.logo em{color:var(--lime);font-style:normal}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--lime)}
+.nav-cta{background:var(--lime);color:var(--dark);font-family:'Space Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:10px 22px;border:none;cursor:pointer;transition:all .2s;text-decoration:none}
+.nav-cta:hover{background:#cfff7a}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.2fr 1fr;padding-top:68px;overflow:hidden}
+.hero-left{background:var(--purple);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.hero-left::before{content:'FRESH';position:absolute;bottom:-2rem;left:-1rem;font-family:'Space Mono',monospace;font-size:12rem;font-weight:700;color:rgba(184,255,87,0.05);white-space:nowrap;pointer-events:none;line-height:1}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(184,255,87,.12);border:1px solid rgba(184,255,87,.25);color:var(--lime);font-size:.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:6px 14px;margin-bottom:2rem;width:fit-content}
+h1{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(2.8rem,6vw,6.5rem);line-height:.95;color:var(--white);margin-bottom:1.5rem;letter-spacing:-2px}
+h1 span{color:var(--lime);display:block}
+.hero-sub{font-size:.9rem;color:rgba(240,239,245,.55);line-height:1.9;font-weight:300;max-width:400px;margin-bottom:3rem}
+.hero-btns{display:flex;gap:1rem}
+.btn-lime{background:var(--lime);color:var(--dark);font-family:'Space Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:14px 30px;border:none;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
+.btn-lime:hover{background:#cfff7a}
+.btn-ow{background:transparent;color:var(--white);font-family:'Space Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:13px 30px;border:1px solid rgba(240,239,245,.2);cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
+.btn-ow:hover{border-color:var(--lime);color:var(--lime)}
+.hero-right{background:var(--dark2);padding:5rem 3rem;display:flex;flex-direction:column;justify-content:center;gap:1rem}
+.hs{background:rgba(91,45,142,.15);border:1px solid var(--border);padding:1.8rem 2rem;border-bottom:3px solid var(--lime)}
+.hs-n{font-family:'Space Mono',monospace;font-size:2.2rem;font-weight:700;color:var(--lime);line-height:1}
+.hs-l{font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--gray);margin-top:.3rem}
+.marquee{background:var(--lime);padding:.7rem 0;overflow:hidden}
+.mt{display:flex;animation:scroll 14s linear infinite;white-space:nowrap}
+.mi{font-family:'Space Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--dark);padding:0 2rem}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.section{padding:6rem 3rem;max-width:1200px;margin:0 auto}
+.eyebrow{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--lime);margin-bottom:.8rem;font-family:'Space Mono',monospace}
+.title{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(2rem,4.5vw,4.5rem);line-height:.95;margin-bottom:1.5rem;letter-spacing:-2px}
+.title em{color:var(--purple2);font-style:normal}
+.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem}
+.svc{background:var(--dark2);border:1px solid var(--border);padding:2.5rem;transition:all .3s;position:relative;overflow:hidden}
+.svc:hover{border-color:var(--lime);background:var(--dark3)}
+.svc::after{content:'';position:absolute;top:0;right:0;width:3px;height:0;background:var(--lime);transition:height .4s}
+.svc:hover::after{height:100%}
+.svc-price{font-family:'Space Mono',monospace;font-size:1.8rem;font-weight:700;color:var(--lime);line-height:1;margin-bottom:.3rem}
+.svc-name{font-weight:600;font-size:1rem;margin-bottom:.6rem;letter-spacing:.5px}
+.svc-desc{font-size:.8rem;color:var(--gray);line-height:1.8}
+.who-section{background:var(--purple);padding:6rem 3rem}
+.who-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.who-visual{display:flex;flex-direction:column;gap:1rem}
+.who-stat{background:rgba(0,0,0,.2);border:1px solid rgba(184,255,87,.15);padding:2rem;text-align:center}
+.ws-n{font-family:'Space Mono',monospace;font-size:3rem;font-weight:700;color:var(--lime);line-height:1}
+.ws-l{font-size:.62rem;letter-spacing:3px;text-transform:uppercase;color:rgba(240,239,245,.4);margin-top:.3rem}
+.who-features{display:flex;flex-direction:column;gap:.8rem;margin-top:2rem}
+.wf{display:flex;align-items:center;gap:.8rem;font-size:.85rem;color:rgba(240,239,245,.7)}
+.wf::before{content:'→';color:var(--lime);font-family:'Space Mono',monospace;font-weight:700;flex-shrink:0}
+.revs{padding:6rem 3rem;background:var(--dark2);border-top:1px solid var(--border)}
+.ri{max-width:1200px;margin:0 auto}
+.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem}
+.rev{background:var(--dark);border:1px solid var(--border);padding:2.5rem;transition:border-color .3s}
+.rev:hover{border-color:rgba(184,255,87,.3)}
+.rev-stars{color:var(--lime);letter-spacing:2px;margin-bottom:1rem;font-size:.82rem}
+.rev-text{font-size:.8rem;color:rgba(240,239,245,.55);line-height:1.9;font-style:italic;margin-bottom:1.5rem}
+.rev-author{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--purple2)}
+.info-section{padding:6rem 3rem;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem}
+.ib{background:var(--dark2);border:1px solid var(--border);padding:1.5rem 2rem;margin-bottom:.8rem;transition:border-color .2s}
+.ib:hover{border-color:var(--purple2)}
+.ib-l{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--lime);margin-bottom:.3rem}
+.ib-v{font-size:.9rem;color:var(--white);line-height:1.6}
+.hrs{margin-top:2.5rem}
+.hr{display:flex;justify-content:space-between;padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.hr-day{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray)}
+.hr-time{font-family:'Space Mono',monospace;font-size:.82rem;color:var(--white)}
+.cta{background:var(--lime);padding:7rem 3rem;text-align:center}
+.cta h2{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(2.5rem,7vw,7rem);color:var(--dark);line-height:.95;letter-spacing:-3px;margin-bottom:1.5rem}
+.cta p{color:rgba(10,10,15,.6);font-size:.88rem;max-width:400px;margin:0 auto 3rem;line-height:1.9}
+.cta-ph{font-family:'Space Mono',monospace;font-weight:700;font-size:2.2rem;color:var(--dark);display:block;margin-bottom:2rem;text-decoration:none;letter-spacing:-1px}
+.btn-dark{background:var(--dark);color:var(--lime);font-family:'Space Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:16px 48px;border:none;cursor:pointer;transition:all .2s;display:inline-block;text-decoration:none}
+.btn-dark:hover{background:var(--purple)}
+footer{background:var(--dark);border-top:1px solid var(--border);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.fl{font-family:'Space Mono',monospace;color:var(--lime);font-size:.9rem;font-weight:700}
+.fc{font-size:.65rem;letter-spacing:1px;color:var(--gray)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.fi{opacity:0;animation:fadeUp .7s ease forwards}
+.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-right{display:none}.nav-links{display:none}.section,.who-section,.revs,.info-section,.cta{padding:4rem 1.5rem}.svcs,.who-inner,.rg,.info-section{grid-template-columns:1fr}}
+.cur{color:var(--lime);position:fixed;width:8px;height:8px;background:currentColor;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s}.cur-ring{position:fixed;width:32px;height:32px;border:1.5px solid currentColor;border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .15s ease;opacity:.5}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:10000;align-items:center;justify-content:center}.modal-overlay.active{display:flex}.modal-box{background:#fff;max-width:400px;width:90%;padding:2.5rem;text-align:center;position:relative;animation:popIn .25s ease}.modal-box h3{font-size:1.2rem;color:#1a1a1a;margin-bottom:.5rem;font-weight:700}.modal-box p{font-size:.85rem;color:#666;line-height:1.6;margin-bottom:1.5rem}.modal-phone{font-size:1.8rem;font-weight:900;color:#B8FF57;display:block;margin-bottom:1rem;text-decoration:none}.modal-addr{font-size:.82rem;color:#888;margin-bottom:1.5rem}.modal-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}.modal-btn-call{background:#B8FF57;color:#fff;padding:12px 28px;border:none;cursor:pointer;font-weight:700;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;display:inline-block}.modal-btn-map{background:transparent;color:#B8FF57;padding:11px 28px;border:1.5px solid #B8FF57;cursor:pointer;font-weight:700;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;display:inline-block}.modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#999;line-height:1}@keyframes popIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Stay <em>Fresh</em> Ent.</div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#info">Hours</a></li>
+  </ul>
+  <a href="tel:3143371626" class="nav-cta" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}">Book Now</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-tag fi d1">St. Charles, MO · All Ages Welcome</div>
+    <h1 class="fi d2">Always<span>Stay Fresh.</span></h1>
+    <p class="hero-sub fi d3">Stay Fresh Ent. delivers premium cuts, fades, and styles for everyone in St. Charles. Great environment, quality work, prices that won't break the bank.</p>
+    <div class="hero-btns fi d3">
+      <a href="tel:3143371626" class="btn-lime" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}">Call to Book</a>
+      <a href="#services" class="btn-ow">Our Services</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hs fi d2"><div class="hs-n">4.7★</div><div class="hs-l">Google Rating · 44 Reviews</div></div>
+    <div class="hs fi d3"><div class="hs-n">ALL</div><div class="hs-l">Ages Welcome</div></div>
+    <div class="hs"><div class="hs-n">7days</div><div class="hs-l">Tue–Sun · Open Late</div></div>
+  </div>
+</div>
+
+<div class="marquee">
+  <div class="mt">
+    <div class="mi">Haircuts ·</div><div class="mi">Fades ·</div><div class="mi">Kids Cuts ·</div><div class="mi">Mohawks ·</div><div class="mi">Beard Trims ·</div><div class="mi">All Ages ·</div><div class="mi">Walk-Ins Welcome ·</div>
+    <div class="mi">Haircuts ·</div><div class="mi">Fades ·</div><div class="mi">Kids Cuts ·</div><div class="mi">Mohawks ·</div><div class="mi">Beard Trims ·</div><div class="mi">All Ages ·</div><div class="mi">Walk-Ins Welcome ·</div>
+  </div>
+</div>
+
+<div class="section" id="services">
+  <div class="eyebrow">// services</div>
+  <h2 class="title">What We <em>Offer</em></h2>
+  <div class="svcs">
+    <div class="svc"><div class="svc-price">$25+</div><div class="svc-name">Fresh Haircut</div><div class="svc-desc">Precision cuts to your style. Our barbers listen to what you want and execute it cleanly every time.</div></div>
+    <div class="svc"><div class="svc-price">$30+</div><div class="svc-name">Fade & Taper</div><div class="svc-desc">Mid fades, high fades, skin fades — all done with expert precision. Lines that stay sharp.</div></div>
+    <div class="svc"><div class="svc-price">$20+</div><div class="svc-name">Kids Cuts</div><div class="svc-desc">Kid-friendly atmosphere with patient barbers. First haircuts, mohawks, fades — we do it all for the little ones.</div></div>
+    <div class="svc"><div class="svc-price">$35+</div><div class="svc-name">Mohawk & Designs</div><div class="svc-desc">Creative cuts, custom designs, mohawks — bring your vision and our barbers make it happen.</div></div>
+    <div class="svc"><div class="svc-price">$15+</div><div class="svc-name">Beard Trim</div><div class="svc-desc">Shape, define, and clean up your beard. Clean edges, straight lines, looking sharp.</div></div>
+    <div class="svc"><div class="svc-price">$40+</div><div class="svc-name">Full Combo</div><div class="svc-desc">Haircut plus beard trim — the complete package. Walk out looking completely fresh.</div></div>
+  </div>
+</div>
+
+<div class="who-section">
+  <div class="who-inner">
+    <div>
+      <div class="eyebrow" style="color:var(--lime)">// why us</div>
+      <h2 class="title" style="color:var(--white)">Real <em style="color:var(--lime)">Quality.</em></h2>
+      <p style="font-size:.88rem;color:rgba(240,239,245,.55);line-height:1.9;margin-bottom:1.5rem">We don't just cut hair — we take pride in every client who sits in our chair. Whether it's your first cut or your hundredth, you get the same attention and care every time.</p>
+      <div class="who-features">
+        <div class="wf">Great environment, welcoming for all ages</div>
+        <div class="wf">Experienced barbers who actually listen</div>
+        <div class="wf">Cheap prices without cutting corners</div>
+        <div class="wf">Open late — Tues–Fri until 9PM</div>
+        <div class="wf">Walk-ins welcome any time</div>
+      </div>
+    </div>
+    <div class="who-visual">
+      <div class="who-stat"><div class="ws-n">4.7★</div><div class="ws-l">Google Rating</div></div>
+      <div class="who-stat"><div class="ws-n">44+</div><div class="ws-l">Happy Clients</div></div>
+      <div class="who-stat"><div class="ws-n">$0</div><div class="ws-l">Booking Fee</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="revs" id="reviews">
+  <div class="ri">
+    <div class="eyebrow">// reviews</div>
+    <h2 class="title">What They <em>Say</em></h2>
+    <div class="rg">
+      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Great environment, cheap prices, and very quality work! Got recommended by a friend and I'll now be recommending all my friends. Stay Fresh never disappoints."</p><div class="rev-author">// Google Review</div></div>
+      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Arturo hooked my son up with a Fresh Mohawk and line up — got him on point! He was great even with a fighting toddler. We definitely will be back. Amazing service."</p><div class="rev-author">// Google Review</div></div>
+      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Great customer service and was open late! Did my son's hair amazingly. Thank you — very professional and took his time. I highly recommend Stay Fresh Ent."</p><div class="rev-author">// Google Review</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="info-section" id="info">
+  <div>
+    <div class="eyebrow">// contact</div>
+    <h2 class="title">Find <em>Us</em></h2>
+    <div class="ib"><div class="ib-l">// phone</div><div class="ib-v">(314) 337-1626</div></div>
+    <div class="ib"><div class="ib-l">// address</div><div class="ib-v">2014 Campus Dr<br>St. Charles, MO 63301</div></div>
+    <div class="ib"><div class="ib-l">// booking</div><div class="ib-v">Walk-ins welcome<br>Call for same-day appointments</div></div>
+  </div>
+  <div>
+    <div class="eyebrow">// hours</div>
+    <h2 class="title">Open <em>Hours</em></h2>
+    <div class="hrs">
+      <div class="hr"><span class="hr-day">Monday</span><span class="hr-time" style="color:var(--gray)">Closed</span></div>
+      <div class="hr"><span class="hr-day">Tuesday</span><span class="hr-time">10:00 AM – 9:00 PM</span></div>
+      <div class="hr"><span class="hr-day">Wednesday</span><span class="hr-time">11:00 AM – 9:00 PM</span></div>
+      <div class="hr"><span class="hr-day">Thursday</span><span class="hr-time">10:00 AM – 9:00 PM</span></div>
+      <div class="hr"><span class="hr-day">Friday</span><span class="hr-time">10:00 AM – 8:00 PM</span></div>
+      <div class="hr"><span class="hr-day">Saturday</span><span class="hr-time">9:00 AM – 6:00 PM</span></div>
+      <div class="hr"><span class="hr-day">Sunday</span><span class="hr-time" style="color:var(--gray)">Closed</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="cta">
+  <h2>Stay Fresh.<br>Always.</h2>
+  <p>Call or walk in — Stay Fresh Ent. is open Tue through Sat. All ages, all styles, always quality.</p>
+  <a href="tel:3143371626" class="cta-ph">(314) 337-1626</a>
+  <a href="tel:3143371626" class="btn-dark" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}">Book Your Cut</a>
+</div>
+
+<footer>
+  <div class="fl">Stay Fresh Ent.</div>
+  <div class="fc">© 2026 Stay Fresh Ent. · 2014 Campus Dr, St. Charles, MO 63301 · (314) 337-1626</div>
+</footer>
+<script>
+const o=new IntersectionObserver(e=>{e.forEach(i=>{if(i.isIntersecting){i.target.style.opacity='1';i.target.style.transform='translateY(0)'}})},{threshold:0.1});
+document.querySelectorAll('.svc,.rev,.hs,.ib,.hr,.wf,.who-stat').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(14px)';el.style.transition='opacity .5s ease,transform .5s ease';o.observe(el)});
+</script>
+<div class="cur" id="cur" style="background:#B8FF57"></div><div class="cur-ring" id="curR" style="border-color:#B8FF57"></div>
+<script>
+const C=document.getElementById("cur"),R=document.getElementById("curR");
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener("mousemove",e=>{mx=e.clientX;my=e.clientY;C.style.left=mx+"px";C.style.top=my+"px"});
+(function loop(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;R.style.left=rx+"px";R.style.top=ry+"px";requestAnimationFrame(loop)})();
+document.querySelectorAll("a,button,.svc,.svc-card,.rev,.service-card,.trust-card,.stat").forEach(el=>{el.addEventListener("mouseenter",()=>{R.style.transform="translate(-50%,-50%) scale(2.2)";R.style.opacity="0.9"});el.addEventListener("mouseleave",()=>{R.style.transform="translate(-50%,-50%) scale(1)";R.style.opacity="0.5"})});
+</script>
+<div class="modal-overlay" id="bookModal"><div class="modal-box"><button class="modal-close" onclick="closeModal()"></body>times;</button><h3>Stay Fresh Ent.</h3><p>Ready to book? Give us a call or find us on the map.</p><a href="tel:3143371626" class="modal-phone">(314) 337-1626</a><div class="modal-addr">2014 Campus Dr, St. Charles, MO 63301</div><div class="modal-btns"><a href="tel:3143371626" class="modal-btn-call">Call Now</a><a href="https://maps.google.com/?q=2014+Campus+Dr+St+Charles+MO" target="_blank" class="modal-btn-map">Get Directions</a></div></div></div><script>function openBookModal(){document.getElementById('bookModal').classList.add('active')}function closeModal(){document.getElementById('bookModal').classList.remove('active')}document.getElementById('bookModal').addEventListener('click',function(e){if(e.target===this)closeModal()});</script>
+</body>
+</html>
