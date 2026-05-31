@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stayfresh-barber-stl.netlify.app/sitemap.xml

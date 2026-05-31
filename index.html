@@ -4,152 +4,458 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stay Fresh Ent. | Barber Shop · St. Charles, MO</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<!-- SEO -->
+<meta name="description" content="Stay Fresh Ent. is a modern barber shop in St. Charles, MO. Fresh fades, designs, and lineups in a high-energy studio. Book your cut - (314) 337-1626.">
+<meta name="keywords" content="barber St. Charles MO, fade, hair design, lineup, men's grooming, Stay Fresh">
+<meta name="author" content="Stay Fresh Ent.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="geo.region" content="US-MO">
+<meta name="geo.placename" content="St. Charles, Missouri">
+<meta name="geo.position" content="38.7931;-90.5074">
+<meta name="ICBM" content="38.7931, -90.5074">
+<link rel="canonical" href="https://stayfresh-barber-stl.netlify.app/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="business.business">
+<meta property="og:site_name" content="Stay Fresh Ent.">
+<meta property="og:title" content="Stay Fresh Ent. | St. Charles, MO">
+<meta property="og:description" content="Stay Fresh Ent. is a modern barber shop in St. Charles, MO. Fresh fades, designs, and lineups in a high-energy studio. Book your cut - (314) 337-1626.">
+<meta property="og:url" content="https://stayfresh-barber-stl.netlify.app/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&h=630&q=80&auto=format&fit=crop">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Stay Fresh Ent. | St. Charles, MO">
+<meta name="twitter:description" content="Stay Fresh Ent. is a modern barber shop in St. Charles, MO. Fresh fades, designs, and lineups in a high-energy studio. Book your cut - (314) 337-1626.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&h=630&q=80&auto=format&fit=crop">
+
+<!-- LocalBusiness structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "@id": "https://stayfresh-barber-stl.netlify.app/#business",
+  "name": "Stay Fresh Ent.",
+  "description": "Stay Fresh Ent. is a modern barber shop in St. Charles, MO. Fresh fades, designs, and lineups in a high-energy studio. Book your cut - (314) 337-1626.",
+  "url": "https://stayfresh-barber-stl.netlify.app/",
+  "telephone": "+1-314-337-1626",
+  "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&h=630&q=80&auto=format&fit=crop",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "St. Charles",
+    "addressRegion": "MO",
+    "postalCode": "63301",
+    "addressCountry": "US",
+    "streetAddress": "2014 Campus Dr"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 38.7931,
+    "longitude": -90.5074
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Tuesday",
+        "Thursday"
+      ],
+      "opens": "10:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Wednesday"
+      ],
+      "opens": "11:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Friday"
+      ],
+      "opens": "10:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "44",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--purple:#5B2D8E;--purple2:#7B4DB5;--lime:#B8FF57;--dark:#0A0A0F;--dark2:#111118;--dark3:#18181F;--white:#F0EFF5;--gray:#7A7A8C;--border:rgba(91,45,142,0.25)}
-body{cursor:none;background:var(--dark);color:var(--white);font-family:'Space Grotesk',sans-serif;overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;padding:0 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,15,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
-.logo{font-family:'Space Mono',monospace;font-weight:700;font-size:1.1rem;color:var(--white);letter-spacing:1px}
+:root{--dark:#0A0A0F;--dark2:#13131A;--dark3:#1E1E28;--lime:#B8FF57;--lime2:#D4FF8A;--magenta:#FF3E9D;--cyan:#3EEFFF;--white:#F0EFF5;--gray:#5C5C6B;--gray2:#8A8A99;--border:rgba(184,255,87,0.2)}
+body{background:var(--dark);color:var(--white);font-family:'Space Grotesk',sans-serif;overflow-x:hidden}
+.scroll-bar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--lime);z-index:200;transition:width .12s linear;box-shadow:0 0 8px var(--lime)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;padding:0 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,15,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.logo{font-family:'Space Mono',monospace;font-weight:700;font-size:1.1rem;color:var(--white);letter-spacing:1px;white-space:nowrap}
 .logo em{color:var(--lime);font-style:normal}
+.logo::before{content:'// ';color:var(--lime);opacity:.5}
 .nav-links{display:flex;gap:2.5rem;list-style:none}
-.nav-links a{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color .2s}
+.nav-links a{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray2);text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--lime)}
-.nav-cta{background:var(--lime);color:var(--dark);font-family:'Space Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:10px 22px;border:none;cursor:pointer;transition:all .2s;text-decoration:none}
-.nav-cta:hover{background:#cfff7a}
-.hero{min-height:100vh;display:grid;grid-template-columns:1.2fr 1fr;padding-top:68px;overflow:hidden}
-.hero-left{background:var(--purple);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
-.hero-left::before{content:'FRESH';position:absolute;bottom:-2rem;left:-1rem;font-family:'Space Mono',monospace;font-size:12rem;font-weight:700;color:rgba(184,255,87,0.05);white-space:nowrap;pointer-events:none;line-height:1}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(184,255,87,.12);border:1px solid rgba(184,255,87,.25);color:var(--lime);font-size:.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:6px 14px;margin-bottom:2rem;width:fit-content}
-h1{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(2.8rem,6vw,6.5rem);line-height:.95;color:var(--white);margin-bottom:1.5rem;letter-spacing:-2px}
-h1 span{color:var(--lime);display:block}
-.hero-sub{font-size:.9rem;color:rgba(240,239,245,.55);line-height:1.9;font-weight:300;max-width:400px;margin-bottom:3rem}
-.hero-btns{display:flex;gap:1rem}
-.btn-lime{background:var(--lime);color:var(--dark);font-family:'Space Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:14px 30px;border:none;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
-.btn-lime:hover{background:#cfff7a}
-.btn-ow{background:transparent;color:var(--white);font-family:'Space Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:13px 30px;border:1px solid rgba(240,239,245,.2);cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
+.nav-cta{background:var(--lime);color:var(--dark);font-family:'Space Grotesk',sans-serif;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;padding:11px 22px;border:none;cursor:pointer;font-weight:700;transition:all .2s;text-decoration:none}
+.nav-cta:hover{background:var(--lime2);transform:translateY(-1px);box-shadow:0 0 16px rgba(184,255,87,.4)}
+
+/* SCROLLYTELLING */
+.story{position:relative;height:600vh;background:var(--dark)}
+.story-pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
+#storyCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.story-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 30%,rgba(0,0,0,.6) 100%);z-index:2;pointer-events:none}
+/* Scanline overlay */
+.story-scan{position:absolute;inset:0;pointer-events:none;z-index:3;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.015) 2px,rgba(255,255,255,.015) 4px);mix-blend-mode:overlay}
+
+.beat{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:6rem 3rem 4rem;z-index:4;pointer-events:none;opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.beat.in{opacity:1;transform:translateY(0);pointer-events:auto}
+.beat-inner{max-width:1100px;width:100%;margin:0 auto}
+.beat-tag{display:inline-block;background:rgba(184,255,87,.12);border:1px solid rgba(184,255,87,.4);color:var(--lime);font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:3px;text-transform:uppercase;padding:7px 14px;margin-bottom:2rem;backdrop-filter:blur(4px)}
+.beat-tag::before{content:'// ';opacity:.5}
+.beat-h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(3.5rem,10vw,11rem);line-height:.92;color:#fff;letter-spacing:-3px;margin-bottom:1.5rem;text-shadow:0 4px 24px rgba(0,0,0,.7),2px 0 0 rgba(255,62,157,.3),-2px 0 0 rgba(62,239,255,.3)}
+.beat-h1 span{color:var(--lime);display:block;text-shadow:0 4px 24px rgba(0,0,0,.7),0 0 30px rgba(184,255,87,.4)}
+.beat-sub{font-size:.95rem;color:#fff;line-height:1.85;max-width:540px;margin-bottom:2.5rem;font-weight:400;text-shadow:0 2px 8px rgba(0,0,0,.85)}
+.beat-stat{display:flex;gap:3rem;margin-top:2rem;flex-wrap:wrap}
+.beat-stat-item{display:flex;flex-direction:column;color:#fff}
+.bs-num{font-family:'Space Mono',monospace;font-weight:700;font-size:2.5rem;color:var(--lime);line-height:1;text-shadow:0 4px 16px rgba(0,0,0,.5)}
+.bs-label{font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:.4rem}
+
+.beat-1 .beat-inner{text-align:left}
+.beat-2 .beat-inner{text-align:right;margin-left:auto}
+.beat-3 .beat-inner{text-align:left}
+.beat-4 .beat-inner{text-align:center}
+.beat-5 .beat-inner{text-align:right;margin-left:auto}
+.beat-6 .beat-inner{text-align:center;padding-bottom:5rem}
+
+.beat-rail{position:absolute;right:2rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:1.4rem;z-index:5;align-items:flex-end}
+.brail-dot{display:flex;align-items:center;gap:14px;color:rgba(255,255,255,.4);font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;transition:color .3s}
+.brail-dot::after{content:'';width:8px;height:8px;background:rgba(255,255,255,.3);transition:all .3s}
+.brail-dot.active{color:var(--lime)}
+.brail-dot.active::after{background:var(--lime);transform:scale(1.5);box-shadow:0 0 16px rgba(184,255,87,.7)}
+
+.btn-lime{background:var(--lime);color:var(--dark);font-size:.78rem;letter-spacing:2px;text-transform:uppercase;padding:15px 32px;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-weight:700;transition:all .2s;text-decoration:none;display:inline-block}
+.btn-lime:hover{background:var(--lime2);box-shadow:0 0 24px rgba(184,255,87,.5)}
+.btn-ow{background:rgba(255,255,255,.05);backdrop-filter:blur(4px);color:#fff;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;padding:14px 32px;border:1px solid rgba(255,255,255,.3);cursor:pointer;font-family:'Space Grotesk',sans-serif;font-weight:600;transition:all .2s;text-decoration:none;display:inline-block}
 .btn-ow:hover{border-color:var(--lime);color:var(--lime)}
-.hero-right{background:var(--dark2);padding:5rem 3rem;display:flex;flex-direction:column;justify-content:center;gap:1rem}
-.hs{background:rgba(91,45,142,.15);border:1px solid var(--border);padding:1.8rem 2rem;border-bottom:3px solid var(--lime)}
-.hs-n{font-family:'Space Mono',monospace;font-size:2.2rem;font-weight:700;color:var(--lime);line-height:1}
-.hs-l{font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--gray);margin-top:.3rem}
-.marquee{background:var(--lime);padding:.7rem 0;overflow:hidden}
-.mt{display:flex;animation:scroll 14s linear infinite;white-space:nowrap}
-.mi{font-family:'Space Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--dark);padding:0 2rem}
+.btn-dark{background:var(--dark2);color:var(--lime);font-size:.8rem;letter-spacing:2px;text-transform:uppercase;padding:16px 48px;border:1px solid var(--lime);cursor:pointer;font-family:'Space Grotesk',sans-serif;font-weight:700;transition:all .2s;display:inline-block;text-decoration:none}
+.btn-dark:hover{background:var(--lime);color:var(--dark)}
+.beat-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.beat-1 .beat-btns,.beat-3 .beat-btns{justify-content:flex-start}
+.beat-2 .beat-btns,.beat-5 .beat-btns{justify-content:flex-end}
+.beat-4 .beat-btns,.beat-6 .beat-btns{justify-content:center}
+
+.magnetic{transition:transform .3s cubic-bezier(.2,.7,.3,1)}
+.magnetic-inner{display:inline-block;transition:transform .3s cubic-bezier(.2,.7,.3,1);pointer-events:none}
+
+/* MARQUEE */
+.marquee{background:var(--lime);padding:.8rem 0;overflow:hidden;position:relative;z-index:4}
+.mt{display:flex;animation:scroll 16s linear infinite;white-space:nowrap}
+.mi{font-family:'Space Mono',monospace;font-weight:700;font-size:.8rem;letter-spacing:3px;text-transform:uppercase;color:var(--dark);padding:0 2.5rem;display:flex;align-items:center;gap:2.5rem}
+.mi::after{content:'//';opacity:.6;font-size:.7rem}
 @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.section{padding:6rem 3rem;max-width:1200px;margin:0 auto}
-.eyebrow{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--lime);margin-bottom:.8rem;font-family:'Space Mono',monospace}
-.title{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(2rem,4.5vw,4.5rem);line-height:.95;margin-bottom:1.5rem;letter-spacing:-2px}
-.title em{color:var(--purple2);font-style:normal}
-.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem}
-.svc{background:var(--dark2);border:1px solid var(--border);padding:2.5rem;transition:all .3s;position:relative;overflow:hidden}
-.svc:hover{border-color:var(--lime);background:var(--dark3)}
-.svc::after{content:'';position:absolute;top:0;right:0;width:3px;height:0;background:var(--lime);transition:height .4s}
-.svc:hover::after{height:100%}
-.svc-price{font-family:'Space Mono',monospace;font-size:1.8rem;font-weight:700;color:var(--lime);line-height:1;margin-bottom:.3rem}
-.svc-name{font-weight:600;font-size:1rem;margin-bottom:.6rem;letter-spacing:.5px}
-.svc-desc{font-size:.8rem;color:var(--gray);line-height:1.8}
-.who-section{background:var(--purple);padding:6rem 3rem}
-.who-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
-.who-visual{display:flex;flex-direction:column;gap:1rem}
-.who-stat{background:rgba(0,0,0,.2);border:1px solid rgba(184,255,87,.15);padding:2rem;text-align:center}
-.ws-n{font-family:'Space Mono',monospace;font-size:3rem;font-weight:700;color:var(--lime);line-height:1}
-.ws-l{font-size:.62rem;letter-spacing:3px;text-transform:uppercase;color:rgba(240,239,245,.4);margin-top:.3rem}
-.who-features{display:flex;flex-direction:column;gap:.8rem;margin-top:2rem}
-.wf{display:flex;align-items:center;gap:.8rem;font-size:.85rem;color:rgba(240,239,245,.7)}
-.wf::before{content:'→';color:var(--lime);font-family:'Space Mono',monospace;font-weight:700;flex-shrink:0}
-.revs{padding:6rem 3rem;background:var(--dark2);border-top:1px solid var(--border)}
-.ri{max-width:1200px;margin:0 auto}
-.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem}
-.rev{background:var(--dark);border:1px solid var(--border);padding:2.5rem;transition:border-color .3s}
-.rev:hover{border-color:rgba(184,255,87,.3)}
-.rev-stars{color:var(--lime);letter-spacing:2px;margin-bottom:1rem;font-size:.82rem}
-.rev-text{font-size:.8rem;color:rgba(240,239,245,.55);line-height:1.9;font-style:italic;margin-bottom:1.5rem}
-.rev-author{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--purple2)}
-.info-section{padding:6rem 3rem;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem}
-.ib{background:var(--dark2);border:1px solid var(--border);padding:1.5rem 2rem;margin-bottom:.8rem;transition:border-color .2s}
-.ib:hover{border-color:var(--purple2)}
-.ib-l{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--lime);margin-bottom:.3rem}
-.ib-v{font-size:.9rem;color:var(--white);line-height:1.6}
+
+/* SECTIONS */
+.section{padding:7rem 3rem;max-width:1300px;margin:0 auto}
+.eyebrow{font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--lime);margin-bottom:1rem}
+.eyebrow::before{content:'// '}
+.title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(2.5rem,5vw,5rem);line-height:.92;margin-bottom:1.5rem;letter-spacing:-2px}
+.title em{color:var(--lime);font-style:normal}
+
+.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:4rem}
+.svc{background:var(--dark);padding:2.8rem;transition:background .3s,transform .3s;position:relative}
+.svc:hover{background:var(--dark2);transform:translateY(-3px)}
+.svc::before{content:'';position:absolute;top:0;left:0;width:0;height:2px;background:var(--lime);transition:width .4s}
+.svc:hover::before{width:100%}
+.svc-price{font-family:'Space Mono',monospace;font-weight:700;font-size:1.8rem;color:var(--lime);line-height:1;margin-bottom:.5rem}
+.svc-name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:-.3px;margin-bottom:.7rem;color:var(--white)}
+.svc-desc{font-size:.85rem;color:var(--gray2);line-height:1.85;font-weight:400}
+
+/* WHO */
+.who-section{background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:7rem 3rem}
+.who-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:6rem;align-items:center}
+.who-features{display:flex;flex-direction:column;gap:.9rem;margin-top:2rem}
+.wf{padding:1rem 1.5rem;background:rgba(255,255,255,.03);border-left:2px solid var(--lime);font-size:.88rem;color:rgba(240,239,245,.75);transition:all .25s;font-family:'Space Mono',monospace}
+.wf:hover{background:rgba(184,255,87,.06);padding-left:2rem}
+.wf::before{content:'> ';color:var(--lime)}
+.who-visual{display:flex;flex-direction:column;gap:1.2rem}
+.who-stat{background:rgba(184,255,87,.05);border:1px solid var(--border);padding:1.8rem 2rem;text-align:left}
+.ws-n{font-family:'Space Mono',monospace;font-weight:700;font-size:2.2rem;color:var(--lime);line-height:1}
+.ws-l{font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--gray2);margin-top:.4rem}
+
+/* REVIEWS */
+.revs{padding:7rem 3rem}
+.ri{max-width:1300px;margin:0 auto}
+.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:4rem}
+.rev{background:var(--dark);padding:3rem;transition:background .3s,transform .3s}
+.rev:hover{background:var(--dark2);transform:translateY(-3px)}
+.rev-stars{color:var(--lime);letter-spacing:2px;margin-bottom:1rem;font-size:.9rem}
+.rev-text{font-size:.88rem;color:rgba(240,239,245,.65);line-height:1.95;font-style:italic;margin-bottom:1.5rem}
+.rev-author{font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:2px;color:var(--lime)}
+.rev-author::before{content:'// '}
+
+/* INFO */
+.info-section{background:var(--dark2);border-top:1px solid var(--border);padding:7rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;max-width:1300px;margin:0 auto}
+.ib{padding:1.5rem;border:1px solid rgba(255,255,255,.06);margin-bottom:.9rem;transition:all .25s}
+.ib:hover{border-color:var(--lime);padding-left:2rem}
+.ib-l{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:3px;text-transform:uppercase;color:var(--lime);margin-bottom:.4rem}
+.ib-l::before{content:'// '}
+.ib-v{font-family:'Space Mono',monospace;font-size:.9rem;color:var(--white);line-height:1.6}
 .hrs{margin-top:2.5rem}
-.hr{display:flex;justify-content:space-between;padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.05)}
-.hr-day{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray)}
-.hr-time{font-family:'Space Mono',monospace;font-size:.82rem;color:var(--white)}
-.cta{background:var(--lime);padding:7rem 3rem;text-align:center}
-.cta h2{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(2.5rem,7vw,7rem);color:var(--dark);line-height:.95;letter-spacing:-3px;margin-bottom:1.5rem}
-.cta p{color:rgba(10,10,15,.6);font-size:.88rem;max-width:400px;margin:0 auto 3rem;line-height:1.9}
-.cta-ph{font-family:'Space Mono',monospace;font-weight:700;font-size:2.2rem;color:var(--dark);display:block;margin-bottom:2rem;text-decoration:none;letter-spacing:-1px}
-.btn-dark{background:var(--dark);color:var(--lime);font-family:'Space Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:16px 48px;border:none;cursor:pointer;transition:all .2s;display:inline-block;text-decoration:none}
-.btn-dark:hover{background:var(--purple)}
-footer{background:var(--dark);border-top:1px solid var(--border);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.fl{font-family:'Space Mono',monospace;color:var(--lime);font-size:.9rem;font-weight:700}
-.fc{font-size:.65rem;letter-spacing:1px;color:var(--gray)}
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.fi{opacity:0;animation:fadeUp .7s ease forwards}
-.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}
-@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-right{display:none}.nav-links{display:none}.section,.who-section,.revs,.info-section,.cta{padding:4rem 1.5rem}.svcs,.who-inner,.rg,.info-section{grid-template-columns:1fr}}
-.cur{color:var(--lime);position:fixed;width:8px;height:8px;background:currentColor;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s}.cur-ring{position:fixed;width:32px;height:32px;border:1.5px solid currentColor;border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .15s ease;opacity:.5}
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:10000;align-items:center;justify-content:center}.modal-overlay.active{display:flex}.modal-box{background:#fff;max-width:400px;width:90%;padding:2.5rem;text-align:center;position:relative;animation:popIn .25s ease}.modal-box h3{font-size:1.2rem;color:#1a1a1a;margin-bottom:.5rem;font-weight:700}.modal-box p{font-size:.85rem;color:#666;line-height:1.6;margin-bottom:1.5rem}.modal-phone{font-size:1.8rem;font-weight:900;color:#B8FF57;display:block;margin-bottom:1rem;text-decoration:none}.modal-addr{font-size:.82rem;color:#888;margin-bottom:1.5rem}.modal-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}.modal-btn-call{background:#B8FF57;color:#fff;padding:12px 28px;border:none;cursor:pointer;font-weight:700;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;display:inline-block}.modal-btn-map{background:transparent;color:#B8FF57;padding:11px 28px;border:1.5px solid #B8FF57;cursor:pointer;font-weight:700;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;display:inline-block}.modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#999;line-height:1}@keyframes popIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+.hr{display:flex;justify-content:space-between;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.hr-day{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray2)}
+.hr-time{font-family:'Space Mono',monospace;font-size:.85rem;color:var(--white)}
+.hr-time.closed{color:var(--gray);font-style:italic}
+
+/* BOOKING */
+.booking-section{background:var(--dark);padding:7rem 3rem;border-top:1px solid var(--border)}
+.booking-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
+.booking-side p{font-size:.92rem;color:var(--gray2);line-height:1.9;margin-bottom:2rem;max-width:380px}
+.booking-side a{color:var(--lime);text-decoration:none;font-weight:700}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;margin-bottom:1.1rem}
+.form-group label{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:3px;text-transform:uppercase;color:var(--lime);margin-bottom:.5rem}
+.form-group label::before{content:'// '}
+.form-group input,.form-group select,.form-group textarea{background:var(--dark2);border:1px solid var(--border);color:var(--white);font-family:'Space Mono',monospace;font-size:.88rem;padding:.9rem 1rem;outline:none;transition:border-color .2s;-webkit-appearance:none;border-radius:0}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--lime)}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--gray)}
+.form-group select option{background:var(--dark2);color:var(--white)}
+.booking-success{padding:2rem 0}
+
+/* CTA */
+.cta{background:var(--lime);padding:8rem 3rem;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'//FRESH';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Space Mono',monospace;font-size:clamp(8rem,18vw,18rem);color:rgba(10,10,15,.08);white-space:nowrap;pointer-events:none;line-height:1;letter-spacing:-2px}
+.cta>*{position:relative;z-index:1}
+.cta h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(3rem,8vw,8rem);color:var(--dark);line-height:.95;letter-spacing:-3px;margin-bottom:1.5rem}
+.cta p{font-family:'Space Mono',monospace;font-size:.85rem;color:rgba(10,10,15,.7);max-width:440px;margin:0 auto 3rem;line-height:1.95}
+.cta-ph{font-family:'Space Mono',monospace;font-weight:700;font-size:2.6rem;color:var(--dark);display:block;margin-bottom:2rem;text-decoration:none;letter-spacing:-1px}
+
+footer{background:var(--dark);border-top:1px solid var(--border);padding:2.2rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.fl{font-family:'Space Mono',monospace;color:var(--lime);font-size:.95rem;font-weight:700}
+.fl::before{content:'// '}
+.fc{font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:1px;color:var(--gray)}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:10000;align-items:center;justify-content:center}
+.modal-overlay.active{display:flex}
+.modal-box{background:var(--dark2);border:1px solid var(--lime);max-width:420px;width:90%;padding:2.5rem;text-align:center;position:relative;animation:popIn .25s ease}
+.modal-box h3{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;color:var(--white);margin-bottom:.5rem;font-weight:700;letter-spacing:-.5px}
+.modal-box p{font-family:'Space Mono',monospace;font-size:.82rem;color:var(--gray2);line-height:1.7;margin-bottom:1.5rem}
+.modal-phone{font-family:'Space Mono',monospace;font-weight:700;font-size:1.8rem;color:var(--lime);display:block;margin-bottom:1rem;text-decoration:none;letter-spacing:-.5px}
+.modal-addr{font-family:'Space Mono',monospace;font-size:.78rem;color:var(--gray);margin-bottom:1.5rem}
+.modal-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.modal-btn-call{background:var(--lime);color:var(--dark);font-family:'Space Grotesk',sans-serif;padding:12px 28px;border:none;cursor:pointer;font-weight:700;font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;display:inline-block}
+.modal-btn-map{background:transparent;color:var(--lime);font-family:'Space Grotesk',sans-serif;padding:11px 28px;border:1.5px solid var(--lime);cursor:pointer;font-weight:700;font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;display:inline-block}
+.modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--gray);line-height:1}
+@keyframes popIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+
+/* ============ GALLERY: 3D TILT-CARD GRID ============ */
+.gallery-section{background:var(--dark);padding:7rem 3rem;border-top:1px solid var(--border);position:relative;overflow:hidden}
+.gallery-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top right,rgba(184,255,87,.05),transparent 60%);pointer-events:none}
+.gallery-inner{max-width:1300px;margin:0 auto;position:relative;z-index:1}
+.gallery-inner>p{font-family:'Space Mono',monospace;font-size:.88rem;color:var(--gray2);line-height:1.95;max-width:560px;margin-top:1rem}
+.tilt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem;perspective:1400px}
+.tilt-card{position:relative;height:340px;background:var(--dark2);border:1px solid var(--border);overflow:hidden;cursor:pointer;transition:transform .35s cubic-bezier(.34,1.2,.64,1),border-color .3s;transform-style:preserve-3d}
+.tilt-card:hover{border-color:var(--lime)}
+.tilt-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .7s,filter .5s;filter:grayscale(.4) brightness(.7) contrast(1.05);transform:translateZ(0)}
+.tilt-card:hover .tilt-bg{transform:translateZ(30px) scale(1.05);filter:grayscale(0) brightness(1) contrast(1)}
+.tilt-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Black Han Sans',sans-serif;color:rgba(184,255,87,.25);font-size:6rem;background:linear-gradient(135deg,#13131A,#0A0A0F)}
+.tilt-overlay{position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(10,10,15,.92));z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem 1.8rem;transform:translateZ(40px);pointer-events:none}
+.tilt-cat{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:3px;text-transform:uppercase;color:var(--lime);font-weight:700;margin-bottom:.3rem}
+.tilt-cat::before{content:'// '}
+.tilt-name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:#fff;letter-spacing:-.3px;line-height:1.2}
+.tilt-corner{position:absolute;top:1rem;right:1.2rem;font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:2px;color:var(--lime);background:rgba(0,0,0,.6);padding:5px 11px;z-index:3;backdrop-filter:blur(6px);transform:translateZ(35px)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .gallery-section{padding:5rem 1.5rem}
+  .tilt-grid{grid-template-columns:1fr;gap:1.2rem;perspective:none}
+  .tilt-card{height:240px}
+  .tilt-bg{transform:none!important}
+  nav{padding:0 1.5rem;height:60px}
+  .nav-links{display:none}
+  .story{height:auto}
+  .story-pin{position:relative;height:auto;display:block;padding:5rem 0}
+  #storyCanvas{position:relative;width:100%;height:60vh;display:block}
+  .beat{position:relative;opacity:1;transform:none;padding:3rem 1.5rem;pointer-events:auto;justify-content:flex-start}
+  .beat-inner{text-align:left!important;margin-left:0!important}
+  .beat-rail{display:none}
+  .section,.who-section,.revs,.cta,.booking-section{padding:5rem 1.5rem}
+  .info-section{padding:5rem 1.5rem;grid-template-columns:1fr;gap:3rem}
+  .svcs,.rg,.who-inner,.booking-inner{grid-template-columns:1fr;gap:3rem}
+  .form-row{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
+<div class="scroll-bar" id="scrollBar"></div>
+
 <nav>
   <div class="logo">Stay <em>Fresh</em> Ent.</div>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why</a></li>
     <li><a href="#reviews">Reviews</a></li>
-    <li><a href="#info">Hours</a></li>
+    <li><a href="#booking">Book</a></li>
   </ul>
-  <a href="tel:3143371626" class="nav-cta" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}">Book Now</a>
+  <a href="tel:3143371626" class="nav-cta magnetic" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}">Book Now</a>
 </nav>
 
-<div class="hero">
-  <div class="hero-left">
-    <div class="hero-tag fi d1">St. Charles, MO · All Ages Welcome</div>
-    <h1 class="fi d2">Always<span>Stay Fresh.</span></h1>
-    <p class="hero-sub fi d3">Stay Fresh Ent. delivers premium cuts, fades, and styles for everyone in St. Charles. Great environment, quality work, prices that won't break the bank.</p>
-    <div class="hero-btns fi d3">
-      <a href="tel:3143371626" class="btn-lime" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}">Call to Book</a>
-      <a href="#services" class="btn-ow">Our Services</a>
+<!-- SCROLLYTELLING: glitch shader scene -->
+<section class="story">
+  <div class="story-pin">
+    <canvas id="storyCanvas"></canvas>
+    <div class="story-vignette"></div>
+    <div class="story-scan"></div>
+
+    <div class="beat-rail" id="beatRail">
+      <div class="brail-dot active" data-beat="0">Signal</div>
+      <div class="brail-dot" data-beat="1">Style</div>
+      <div class="brail-dot" data-beat="2">The Cut</div>
+      <div class="brail-dot" data-beat="3">Services</div>
+      <div class="brail-dot" data-beat="4">Fresh</div>
+      <div class="brail-dot" data-beat="5">Book</div>
+    </div>
+
+    <div class="beat beat-1 in">
+      <div class="beat-inner">
+        <div class="beat-tag">St. Charles · 4.7★ · All Ages</div>
+        <h1 class="beat-h1">Always<span>Stay Fresh.</span></h1>
+        <p class="beat-sub">Premium cuts, fades, mohawks, and beard work for everyone in St. Charles. Great environment, real quality, prices that won't break the bank.</p>
+        <div class="beat-btns">
+          <a href="tel:3143371626" class="btn-lime magnetic" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}"><span class="magnetic-inner">Book a Cut</span></a>
+          <a href="#services" class="btn-ow magnetic"><span class="magnetic-inner">Services</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="beat beat-2">
+      <div class="beat-inner">
+        <div class="beat-tag">Every Style</div>
+        <h1 class="beat-h1">Fade. Taper.<span>Mohawk.</span></h1>
+        <p class="beat-sub" style="margin-left:auto">Mid fades, high fades, skin fades, mohawks, custom designs — Arturo and the team make any style you want, sharp every time.</p>
+        <div class="beat-stat" style="justify-content:flex-end">
+          <div class="beat-stat-item"><div class="bs-num">4.7★</div><div class="bs-label">Google · 44 Reviews</div></div>
+          <div class="beat-stat-item"><div class="bs-num">ALL</div><div class="bs-label">Ages Welcome</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="beat beat-3">
+      <div class="beat-inner">
+        <div class="beat-tag">The Cut</div>
+        <h1 class="beat-h1">Sharp Lines.<span>Sharper Vibe.</span></h1>
+        <p class="beat-sub">Patient barbers, kid-friendly atmosphere, open late. We don't rush. Your lines stay crisp because we take the time.</p>
+      </div>
+    </div>
+
+    <div class="beat beat-4">
+      <div class="beat-inner">
+        <div class="beat-tag">Six Services</div>
+        <h1 class="beat-h1">Pick Your<span>Style.</span></h1>
+        <p class="beat-sub" style="margin:0 auto 2rem">Fresh haircut, fade &amp; taper, kids cuts, mohawks &amp; designs, beard trim, full combo. Walk in or book ahead.</p>
+        <div class="beat-btns" style="justify-content:center">
+          <a href="#services" class="btn-lime magnetic"><span class="magnetic-inner">View Services</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="beat beat-5">
+      <div class="beat-inner">
+        <div class="beat-tag">Open Late</div>
+        <h1 class="beat-h1">Tue–Fri Until<span>9PM.</span></h1>
+        <p class="beat-sub" style="margin-left:auto">Real cuts after work. Open late on weekdays so you don't have to skip the gym, work, or kids' practice for a haircut.</p>
+        <div class="beat-stat" style="justify-content:flex-end">
+          <div class="beat-stat-item"><div class="bs-num">6</div><div class="bs-label">Days a Week</div></div>
+          <div class="beat-stat-item"><div class="bs-num">$0</div><div class="bs-label">Booking Fee</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="beat beat-6">
+      <div class="beat-inner">
+        <div class="beat-tag">Get In The Chair</div>
+        <h1 class="beat-h1">Book.</h1>
+        <a href="tel:3143371626" style="font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(2.5rem,5vw,4rem);color:var(--lime);text-decoration:none;display:block;margin:1.5rem 0;letter-spacing:-1px;text-shadow:0 4px 24px rgba(0,0,0,.5)">(314) 337-1626</a>
+        <div class="beat-btns" style="justify-content:center">
+          <a href="tel:3143371626" class="btn-lime magnetic" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}"><span class="magnetic-inner">Book Cut</span></a>
+          <a href="#booking" class="btn-ow magnetic"><span class="magnetic-inner">Send Note</span></a>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="hero-right">
-    <div class="hs fi d2"><div class="hs-n">4.7★</div><div class="hs-l">Google Rating · 44 Reviews</div></div>
-    <div class="hs fi d3"><div class="hs-n">ALL</div><div class="hs-l">Ages Welcome</div></div>
-    <div class="hs"><div class="hs-n">7days</div><div class="hs-l">Tue–Sun · Open Late</div></div>
-  </div>
-</div>
+</section>
 
 <div class="marquee">
   <div class="mt">
-    <div class="mi">Haircuts ·</div><div class="mi">Fades ·</div><div class="mi">Kids Cuts ·</div><div class="mi">Mohawks ·</div><div class="mi">Beard Trims ·</div><div class="mi">All Ages ·</div><div class="mi">Walk-Ins Welcome ·</div>
-    <div class="mi">Haircuts ·</div><div class="mi">Fades ·</div><div class="mi">Kids Cuts ·</div><div class="mi">Mohawks ·</div><div class="mi">Beard Trims ·</div><div class="mi">All Ages ·</div><div class="mi">Walk-Ins Welcome ·</div>
+    <div class="mi">Haircuts</div><div class="mi">Fades</div><div class="mi">Kids Cuts</div><div class="mi">Mohawks</div><div class="mi">Beard Trims</div><div class="mi">Open Late</div><div class="mi">Walk-Ins</div>
+    <div class="mi">Haircuts</div><div class="mi">Fades</div><div class="mi">Kids Cuts</div><div class="mi">Mohawks</div><div class="mi">Beard Trims</div><div class="mi">Open Late</div><div class="mi">Walk-Ins</div>
   </div>
 </div>
 
+<!-- SERVICES -->
 <div class="section" id="services">
-  <div class="eyebrow">// services</div>
-  <h2 class="title">What We <em>Offer</em></h2>
+  <div class="eyebrow">services</div>
+  <h2 class="title" data-split>What We <em>Offer.</em></h2>
   <div class="svcs">
     <div class="svc"><div class="svc-price">$25+</div><div class="svc-name">Fresh Haircut</div><div class="svc-desc">Precision cuts to your style. Our barbers listen to what you want and execute it cleanly every time.</div></div>
-    <div class="svc"><div class="svc-price">$30+</div><div class="svc-name">Fade & Taper</div><div class="svc-desc">Mid fades, high fades, skin fades — all done with expert precision. Lines that stay sharp.</div></div>
+    <div class="svc"><div class="svc-price">$30+</div><div class="svc-name">Fade &amp; Taper</div><div class="svc-desc">Mid fades, high fades, skin fades — all done with expert precision. Lines that stay sharp.</div></div>
     <div class="svc"><div class="svc-price">$20+</div><div class="svc-name">Kids Cuts</div><div class="svc-desc">Kid-friendly atmosphere with patient barbers. First haircuts, mohawks, fades — we do it all for the little ones.</div></div>
-    <div class="svc"><div class="svc-price">$35+</div><div class="svc-name">Mohawk & Designs</div><div class="svc-desc">Creative cuts, custom designs, mohawks — bring your vision and our barbers make it happen.</div></div>
+    <div class="svc"><div class="svc-price">$35+</div><div class="svc-name">Mohawk &amp; Designs</div><div class="svc-desc">Creative cuts, custom designs, mohawks — bring your vision and our barbers make it happen.</div></div>
     <div class="svc"><div class="svc-price">$15+</div><div class="svc-name">Beard Trim</div><div class="svc-desc">Shape, define, and clean up your beard. Clean edges, straight lines, looking sharp.</div></div>
     <div class="svc"><div class="svc-price">$40+</div><div class="svc-name">Full Combo</div><div class="svc-desc">Haircut plus beard trim — the complete package. Walk out looking completely fresh.</div></div>
   </div>
 </div>
 
-<div class="who-section">
+<!-- GALLERY: 3D tilt-card grid -->
+<section class="gallery-section" id="gallery">
+  <div class="gallery-inner">
+    <div class="eyebrow">recent cuts</div>
+    <h2 class="title" data-split>Fresh, <em>every time.</em></h2>
+    <p>Move your mouse over any tile — they tilt in 3D. Recent work from Arturo and the team: fades, mohawks, kids cuts, beard work. Every style, sharp every time.</p>
+    <div class="tilt-grid" id="tiltGrid">
+      <div class="tilt-card"><div class="tilt-fallback">01</div><div class="tilt-bg" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop')"></div><div class="tilt-corner">01</div><div class="tilt-overlay"><div class="tilt-cat">Low Fade</div><div class="tilt-name">Razor Drop</div></div></div>
+      <div class="tilt-card"><div class="tilt-fallback">02</div><div class="tilt-bg" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80&auto=format&fit=crop')"></div><div class="tilt-corner">02</div><div class="tilt-overlay"><div class="tilt-cat">Classic Cut</div><div class="tilt-name">Mid Length</div></div></div>
+      <div class="tilt-card"><div class="tilt-fallback">03</div><div class="tilt-bg" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80&auto=format&fit=crop')"></div><div class="tilt-corner">03</div><div class="tilt-overlay"><div class="tilt-cat">Beard Sculpt</div><div class="tilt-name">Full Shape-Up</div></div></div>
+      <div class="tilt-card"><div class="tilt-fallback">04</div><div class="tilt-bg" style="background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80&auto=format&fit=crop')"></div><div class="tilt-corner">04</div><div class="tilt-overlay"><div class="tilt-cat">Cut + Beard</div><div class="tilt-name">Full Combo</div></div></div>
+      <div class="tilt-card"><div class="tilt-fallback">05</div><div class="tilt-bg" style="background-image:url('https://images.unsplash.com/photo-1521490878406-d7ab1ac09b75?w=900&q=80&auto=format&fit=crop')"></div><div class="tilt-corner">05</div><div class="tilt-overlay"><div class="tilt-cat">Kid's Mohawk</div><div class="tilt-name">First Cut Hero</div></div></div>
+      <div class="tilt-card"><div class="tilt-fallback">06</div><div class="tilt-bg" style="background-image:url('https://images.unsplash.com/photo-1620331317535-83d3aa10de23?w=900&q=80&auto=format&fit=crop')"></div><div class="tilt-corner">06</div><div class="tilt-overlay"><div class="tilt-cat">Straight Razor</div><div class="tilt-name">Hot Towel Finish</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<div class="who-section" id="why">
   <div class="who-inner">
     <div>
-      <div class="eyebrow" style="color:var(--lime)">// why us</div>
-      <h2 class="title" style="color:var(--white)">Real <em style="color:var(--lime)">Quality.</em></h2>
-      <p style="font-size:.88rem;color:rgba(240,239,245,.55);line-height:1.9;margin-bottom:1.5rem">We don't just cut hair — we take pride in every client who sits in our chair. Whether it's your first cut or your hundredth, you get the same attention and care every time.</p>
+      <div class="eyebrow">why us</div>
+      <h2 class="title" data-split>Real <em>Quality.</em></h2>
+      <p style="font-size:.92rem;color:var(--gray2);line-height:1.9;margin-bottom:1.5rem">We don't just cut hair — we take pride in every client who sits in our chair. Whether it's your first cut or your hundredth, you get the same attention and care every time.</p>
       <div class="who-features">
         <div class="wf">Great environment, welcoming for all ages</div>
         <div class="wf">Experienced barbers who actually listen</div>
-        <div class="wf">Cheap prices without cutting corners</div>
+        <div class="wf">Real prices without cutting corners</div>
         <div class="wf">Open late — Tues–Fri until 9PM</div>
         <div class="wf">Walk-ins welcome any time</div>
       </div>
@@ -162,64 +468,390 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:2rem 3r
   </div>
 </div>
 
+<!-- REVIEWS -->
 <div class="revs" id="reviews">
   <div class="ri">
-    <div class="eyebrow">// reviews</div>
-    <h2 class="title">What They <em>Say</em></h2>
+    <div class="eyebrow">reviews</div>
+    <h2 class="title" data-split>What They <em>Say.</em></h2>
     <div class="rg">
-      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Great environment, cheap prices, and very quality work! Got recommended by a friend and I'll now be recommending all my friends. Stay Fresh never disappoints."</p><div class="rev-author">// Google Review</div></div>
-      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Arturo hooked my son up with a Fresh Mohawk and line up — got him on point! He was great even with a fighting toddler. We definitely will be back. Amazing service."</p><div class="rev-author">// Google Review</div></div>
-      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Great customer service and was open late! Did my son's hair amazingly. Thank you — very professional and took his time. I highly recommend Stay Fresh Ent."</p><div class="rev-author">// Google Review</div></div>
+      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Great environment, real prices, and very quality work! Got recommended by a friend and I'll now be recommending all my friends. Stay Fresh never disappoints."</p><div class="rev-author">Google Review</div></div>
+      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Arturo hooked my son up with a Fresh Mohawk and line up — got him on point! He was great even with a fighting toddler. We definitely will be back. Amazing service."</p><div class="rev-author">Google Review</div></div>
+      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Great customer service and was open late! Did my son's hair amazingly. Thank you — very professional and took his time. I highly recommend Stay Fresh Ent."</p><div class="rev-author">Google Review</div></div>
     </div>
   </div>
 </div>
 
+<!-- INFO -->
 <div class="info-section" id="info">
   <div>
-    <div class="eyebrow">// contact</div>
-    <h2 class="title">Find <em>Us</em></h2>
-    <div class="ib"><div class="ib-l">// phone</div><div class="ib-v">(314) 337-1626</div></div>
-    <div class="ib"><div class="ib-l">// address</div><div class="ib-v">2014 Campus Dr<br>St. Charles, MO 63301</div></div>
-    <div class="ib"><div class="ib-l">// booking</div><div class="ib-v">Walk-ins welcome<br>Call for same-day appointments</div></div>
+    <div class="eyebrow">contact</div>
+    <h2 class="title" data-split>Find <em>Us.</em></h2>
+    <div class="ib"><div class="ib-l">phone</div><div class="ib-v">(314) 337-1626</div></div>
+    <div class="ib"><div class="ib-l">address</div><div class="ib-v">2014 Campus Dr<br>St. Charles, MO 63301</div></div>
+    <div class="ib"><div class="ib-l">booking</div><div class="ib-v">Walk-ins welcome<br>Call for same-day appointments</div></div>
   </div>
   <div>
-    <div class="eyebrow">// hours</div>
-    <h2 class="title">Open <em>Hours</em></h2>
+    <div class="eyebrow">hours</div>
+    <h2 class="title" data-split>Open <em>Hours.</em></h2>
     <div class="hrs">
-      <div class="hr"><span class="hr-day">Monday</span><span class="hr-time" style="color:var(--gray)">Closed</span></div>
+      <div class="hr"><span class="hr-day">Monday</span><span class="hr-time closed">Closed</span></div>
       <div class="hr"><span class="hr-day">Tuesday</span><span class="hr-time">10:00 AM – 9:00 PM</span></div>
       <div class="hr"><span class="hr-day">Wednesday</span><span class="hr-time">11:00 AM – 9:00 PM</span></div>
       <div class="hr"><span class="hr-day">Thursday</span><span class="hr-time">10:00 AM – 9:00 PM</span></div>
       <div class="hr"><span class="hr-day">Friday</span><span class="hr-time">10:00 AM – 8:00 PM</span></div>
       <div class="hr"><span class="hr-day">Saturday</span><span class="hr-time">9:00 AM – 6:00 PM</span></div>
-      <div class="hr"><span class="hr-day">Sunday</span><span class="hr-time" style="color:var(--gray)">Closed</span></div>
+      <div class="hr"><span class="hr-day">Sunday</span><span class="hr-time closed">Closed</span></div>
     </div>
   </div>
 </div>
 
+<!-- BOOKING -->
+<div class="booking-section" id="booking">
+  <div class="booking-inner">
+    <div class="booking-side">
+      <div class="eyebrow">book a cut</div>
+      <h2 class="title" data-split>Get In The <em>Chair.</em></h2>
+      <p>Tell us when you want to come in and what you want. We'll text back fast. Prefer calling? <a href="tel:3143371626">(314) 337-1626</a> rings to the shop.</p>
+      <p style="font-family:'Space Mono',monospace;font-size:.72rem;color:var(--lime);letter-spacing:2px;text-transform:uppercase;margin-bottom:0">// walk-ins welcome · tue-sat · open late</p>
+    </div>
+    <div>
+      <form id="bookingForm" name="booking" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="booking"/>
+        <div style="display:none"><input name="bot-field"/></div>
+        <div class="form-row">
+          <div class="form-group"><label for="bName">Name</label><input type="text" id="bName" name="name" required placeholder="Your name"/></div>
+          <div class="form-group"><label for="bPhone">Phone</label><input type="tel" id="bPhone" name="phone" required placeholder="(314) 000-0000"/></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="bService">Service</label><select id="bService" name="service" required><option value="" disabled selected>Choose...</option><option>Fresh Haircut</option><option>Fade &amp; Taper</option><option>Kids Cut</option><option>Mohawk &amp; Design</option><option>Beard Trim</option><option>Full Combo</option></select></div>
+          <div class="form-group"><label for="bDate">When?</label><input type="date" id="bDate" name="date"/></div>
+        </div>
+        <div class="form-group"><label for="bNotes">Notes</label><textarea id="bNotes" name="notes" rows="3" placeholder="Specific style, kid's age, reference photo, etc..."></textarea></div>
+        <button type="submit" class="btn-lime magnetic" style="width:100%;padding:18px;font-size:.85rem;letter-spacing:2.5px"><span class="magnetic-inner">Send Request</span></button>
+      </form>
+      <div id="bookingSuccess" class="booking-success" style="display:none">
+        <div class="eyebrow">got it</div>
+        <h3 class="title" style="font-size:clamp(1.8rem,3vw,2.8rem)">See You <em>Soon.</em></h3>
+        <p style="font-family:'Space Mono',monospace;font-size:.88rem;color:var(--gray2);line-height:1.9">We got your request and will text back within the hour. Sooner? <a href="tel:3143371626" style="color:var(--lime);text-decoration:none;font-weight:700">(314) 337-1626</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
 <div class="cta">
   <h2>Stay Fresh.<br>Always.</h2>
   <p>Call or walk in — Stay Fresh Ent. is open Tue through Sat. All ages, all styles, always quality.</p>
   <a href="tel:3143371626" class="cta-ph">(314) 337-1626</a>
-  <a href="tel:3143371626" class="btn-dark" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}">Book Your Cut</a>
+  <a href="tel:3143371626" class="btn-dark magnetic" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}"><span class="magnetic-inner">Book Your Cut</span></a>
 </div>
 
 <footer>
   <div class="fl">Stay Fresh Ent.</div>
   <div class="fc">© 2026 Stay Fresh Ent. · 2014 Campus Dr, St. Charles, MO 63301 · (314) 337-1626</div>
 </footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="bookModal"><div class="modal-box"><button class="modal-close" onclick="closeModal()">&times;</button><h3>Stay Fresh Ent.</h3><p>Ready to book? Give us a call.</p><a href="tel:3143371626" class="modal-phone">(314) 337-1626</a><div class="modal-addr">2014 Campus Dr, St. Charles, MO 63301</div><div class="modal-btns"><a href="tel:3143371626" class="modal-btn-call">Call Now</a><a href="https://maps.google.com/?q=2014+Campus+Dr+St+Charles+MO" target="_blank" class="modal-btn-map">Get Directions</a></div></div></div>
+<script>function openBookModal(){document.getElementById('bookModal').classList.add('active')}function closeModal(){document.getElementById('bookModal').classList.remove('active')}document.getElementById('bookModal').addEventListener('click',function(e){if(e.target===this)closeModal()});</script>
+
+<!-- CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+<!-- Scroll progress -->
+<script>(function(){var bar=document.getElementById('scrollBar');function upd(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;bar.style.width=(m>0?(window.scrollY/m)*100:0)+'%'}window.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd,{passive:true});upd()})();</script>
+
+<!-- Lenis -->
 <script>
-const o=new IntersectionObserver(e=>{e.forEach(i=>{if(i.isIntersecting){i.target.style.opacity='1';i.target.style.transform='translateY(0)'}})},{threshold:0.1});
-document.querySelectorAll('.svc,.rev,.hs,.ib,.hr,.wf,.who-stat').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(14px)';el.style.transition='opacity .5s ease,transform .5s ease';o.observe(el)});
+(function(){if(!window.Lenis||window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+var lenis=new Lenis({lerp:0.07,smoothWheel:true,smoothTouch:false,wheelMultiplier:0.85,touchMultiplier:1.5});
+window.__lenis=lenis;
+if(window.gsap&&window.ScrollTrigger){gsap.registerPlugin(ScrollTrigger);lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(function(t){lenis.raf(t*1000)});gsap.ticker.lagSmoothing(0)}else{function r(t){lenis.raf(t);requestAnimationFrame(r)}requestAnimationFrame(r)}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=document.querySelector(id);if(!t)return;e.preventDefault();lenis.scrollTo(t,{offset:-60,duration:1.2})})})})();
 </script>
-<div class="cur" id="cur" style="background:#B8FF57"></div><div class="cur-ring" id="curR" style="border-color:#B8FF57"></div>
+
+<!-- SCROLLYTELLING: glitch/RGB-split shader scene -->
 <script>
-const C=document.getElementById("cur"),R=document.getElementById("curR");
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener("mousemove",e=>{mx=e.clientX;my=e.clientY;C.style.left=mx+"px";C.style.top=my+"px"});
-(function loop(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;R.style.left=rx+"px";R.style.top=ry+"px";requestAnimationFrame(loop)})();
-document.querySelectorAll("a,button,.svc,.svc-card,.rev,.service-card,.trust-card,.stat").forEach(el=>{el.addEventListener("mouseenter",()=>{R.style.transform="translate(-50%,-50%) scale(2.2)";R.style.opacity="0.9"});el.addEventListener("mouseleave",()=>{R.style.transform="translate(-50%,-50%) scale(1)";R.style.opacity="0.5"})});
+(function(){
+  if(!window.THREE||!window.gsap||!window.ScrollTrigger)return;
+  var canvas=document.getElementById('storyCanvas');
+  if(!canvas)return;
+  if(window.innerWidth<=900)return;
+
+  var W=canvas.offsetWidth,H=canvas.offsetHeight;
+  var renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,1.5));
+  renderer.setSize(W,H);
+  var scene=new THREE.Scene();
+  var camera=new THREE.PerspectiveCamera(50,W/H,0.1,200);
+  camera.position.set(0,0,15);
+
+  // FULLSCREEN GLITCH BACKGROUND (orthographic quad)
+  var glitchScene=new THREE.Scene();
+  var glitchCam=new THREE.OrthographicCamera(-1,1,1,-1,0,1);
+  var glitchMat=new THREE.ShaderMaterial({
+    uniforms:{
+      uTime:{value:0},
+      uIntensity:{value:0.3},
+      uColor1:{value:new THREE.Color(0xB8FF57)},
+      uColor2:{value:new THREE.Color(0xFF3E9D)},
+      uColor3:{value:new THREE.Color(0x3EEFFF)}
+    },
+    vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position,1.0);}',
+    fragmentShader:`
+      precision highp float;
+      uniform float uTime;
+      uniform float uIntensity;
+      uniform vec3 uColor1;
+      uniform vec3 uColor2;
+      uniform vec3 uColor3;
+      varying vec2 vUv;
+      float rand(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+      float noise(vec2 p){vec2 i=floor(p);vec2 f=fract(p);vec2 u=f*f*(3.0-2.0*f);return mix(mix(rand(i),rand(i+vec2(1,0)),u.x),mix(rand(i+vec2(0,1)),rand(i+vec2(1,1)),u.x),u.y);}
+      void main(){
+        vec2 uv=vUv;
+        // Periodic horizontal tear lines
+        float band=floor(uv.y*120.0);
+        float tearAmt=step(0.96,rand(vec2(band,floor(uTime*4.0))))*0.08*uIntensity;
+        uv.x+=tearAmt;
+        // RGB chromatic split — separation grows with intensity
+        float split=0.012*uIntensity;
+        float r=noise(uv*8.0+vec2(uTime*0.1,0.0)+vec2(split,0.0));
+        float g=noise(uv*8.0+vec2(uTime*0.1,0.0));
+        float b=noise(uv*8.0+vec2(uTime*0.1,0.0)-vec2(split,0.0));
+        // Base color (dark)
+        vec3 col=vec3(0.04,0.04,0.06);
+        // Soft glow patches
+        float glow=smoothstep(0.5,0.95,r*0.6+g*0.3+b*0.4);
+        col+=uColor1*glow*0.18*uIntensity;
+        // Bright glitch flashes on random scanlines
+        float flash=step(0.98,rand(vec2(band,floor(uTime*8.0))))*uIntensity;
+        col+=mix(uColor2,uColor3,sin(uTime+band)*.5+.5)*flash*0.6;
+        // Vignette
+        float vig=smoothstep(1.4,0.3,length(vUv-0.5)*1.8);
+        col*=vig;
+        gl_FragColor=vec4(col,1.0);
+      }
+    `
+  });
+  glitchScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2,2),glitchMat));
+
+  // 3D CENTERPIECE: an octahedron that spins + grows when glitch is high
+  var coreGeo=new THREE.OctahedronGeometry(2.5,0);
+  var coreMat=new THREE.MeshBasicMaterial({color:0xB8FF57,wireframe:true,transparent:true,opacity:0.9});
+  var core=new THREE.Mesh(coreGeo,coreMat);
+  scene.add(core);
+
+  // Concentric rings around the core (geometric futurism)
+  var ringGroup=new THREE.Group();
+  for(var i=0;i<4;i++){
+    var ring=new THREE.Mesh(
+      new THREE.TorusGeometry(3.5+i*1.2,0.04,6,40),
+      new THREE.MeshBasicMaterial({color:i%2?0xB8FF57:0xFF3E9D,transparent:true,opacity:0.4-i*0.07})
+    );
+    ring.rotation.x=Math.PI/2.5+i*0.2;
+    ring.rotation.y=i*0.4;
+    ringGroup.add(ring);
+  }
+  scene.add(ringGroup);
+
+  // Floating particles (binary code dots feel)
+  var PCOUNT=140;
+  var ppos=new Float32Array(PCOUNT*3);
+  for(var i=0;i<PCOUNT;i++){ppos[i*3]=(Math.random()-.5)*50;ppos[i*3+1]=(Math.random()-.5)*30;ppos[i*3+2]=(Math.random()-.5)*15}
+  var pgeo=new THREE.BufferGeometry();
+  pgeo.setAttribute('position',new THREE.BufferAttribute(ppos,3));
+  scene.add(new THREE.Points(pgeo,new THREE.PointsMaterial({color:0xB8FF57,size:0.5,transparent:true,opacity:0.55,sizeAttenuation:true})));
+
+  // STATE
+  var state={
+    camX:0,camY:0,camZ:15,
+    lookX:0,lookY:0,lookZ:0,
+    glitchIntensity:0.4,
+    coreScale:1,
+    coreOpacity:0.9,
+    ringRot:0
+  };
+
+  // TIMELINE: 6 beats
+  // Beat 1: subtle glitch, core idle spin
+  // Beat 2: glitch ramps up, core grows + spin faster
+  // Beat 3: GLITCH PEAK, intense color separation
+  // Beat 4: glitch eases, core stabilizes
+  // Beat 5: glitch low, clean state
+  // Beat 6: subtle glitch pulse, core centers
+
+  var tl=gsap.timeline({
+    defaults:{ease:'power3.inOut'},
+    scrollTrigger:{
+      trigger:'.story',start:'top top',end:'bottom bottom',
+      scrub:1.2,pin:'.story-pin',anticipatePin:1,fastScrollEnd:true,
+      onUpdate:function(self){
+        var idx=Math.min(5,Math.floor(self.progress*6));
+        document.querySelectorAll('.beat').forEach(function(b,i){b.classList.toggle('in',i===idx)});
+        document.querySelectorAll('.brail-dot').forEach(function(d,i){d.classList.toggle('active',i===idx)});
+      }
+    }
+  });
+
+  tl.to(state,{camX:-3,camY:1,camZ:14,lookX:-1,glitchIntensity:0.5,duration:1.3},0)
+    .to(state,{camX:4,camY:-1,camZ:12,lookX:2,glitchIntensity:0.75,coreScale:1.15,duration:1.4},'>-0.2')
+    // BEAT 3: GLITCH PEAK
+    .to(state,{camX:0,camY:0,camZ:10,lookX:0,glitchIntensity:1.4,coreScale:1.3,duration:1.4,ease:'power2.in'},'>-0.2')
+    // BEAT 4: ease
+    .to(state,{camX:-2,camY:1,camZ:13,lookX:-1,glitchIntensity:0.6,coreScale:1.1,duration:1.5},'>')
+    // BEAT 5: clean
+    .to(state,{camX:3,camY:-1,camZ:14,lookX:1,glitchIntensity:0.3,coreScale:1,duration:1.5},'>-0.2')
+    // BEAT 6: subtle pulse
+    .to(state,{camX:0,camY:0,camZ:16,lookX:0,glitchIntensity:0.5,coreScale:0.95,duration:1.3},'>-0.2');
+
+  var clock=new THREE.Clock();
+  var heroVisible=true;
+  if('IntersectionObserver' in window){new IntersectionObserver(function(e){heroVisible=e[0].isIntersecting},{threshold:0.01}).observe(canvas)}
+  window.addEventListener('resize',function(){
+    if(window.innerWidth<=900)return;
+    W=canvas.offsetWidth;H=canvas.offsetHeight;
+    renderer.setSize(W,H);camera.aspect=W/H;camera.updateProjectionMatrix();
+  },{passive:true});
+
+  function render(){
+    requestAnimationFrame(render);
+    if(!heroVisible)return;
+    var t=clock.getElapsedTime();
+    glitchMat.uniforms.uTime.value=t;
+    glitchMat.uniforms.uIntensity.value=state.glitchIntensity;
+
+    // Render glitch background first (autoClear true is default; for layered render we manually clear once)
+    renderer.autoClear=true;
+    renderer.render(glitchScene,glitchCam);
+    renderer.autoClear=false;
+
+    // Spin core proportional to glitch intensity
+    core.rotation.x=t*(0.3+state.glitchIntensity*0.6);
+    core.rotation.y=t*(0.4+state.glitchIntensity*0.8);
+    core.scale.setScalar(state.coreScale);
+    core.material.opacity=state.coreOpacity;
+
+    ringGroup.rotation.x=t*0.2;
+    ringGroup.rotation.y=-t*0.15;
+
+    camera.position.set(state.camX,state.camY,state.camZ);
+    camera.lookAt(state.lookX,state.lookY,state.lookZ);
+    renderer.render(scene,camera);
+  }
+  render();
+
+  document.querySelectorAll('.brail-dot').forEach(function(d){
+    d.addEventListener('click',function(){
+      var beat=parseInt(d.dataset.beat,10);
+      var story=document.querySelector('.story');
+      var rect=story.getBoundingClientRect();
+      var pageTop=window.scrollY+rect.top;
+      var sectionH=story.offsetHeight-window.innerHeight;
+      var targetY=pageTop+sectionH*(beat/5.5);
+      if(window.__lenis){window.__lenis.scrollTo(targetY,{duration:1.2})}
+      else{window.scrollTo({top:targetY,behavior:'smooth'})}
+    });
+  });
+})();
 </script>
-<div class="modal-overlay" id="bookModal"><div class="modal-box"><button class="modal-close" onclick="closeModal()"></body>times;</button><h3>Stay Fresh Ent.</h3><p>Ready to book? Give us a call or find us on the map.</p><a href="tel:3143371626" class="modal-phone">(314) 337-1626</a><div class="modal-addr">2014 Campus Dr, St. Charles, MO 63301</div><div class="modal-btns"><a href="tel:3143371626" class="modal-btn-call">Call Now</a><a href="https://maps.google.com/?q=2014+Campus+Dr+St+Charles+MO" target="_blank" class="modal-btn-map">Get Directions</a></div></div></div><script>function openBookModal(){document.getElementById('bookModal').classList.add('active')}function closeModal(){document.getElementById('bookModal').classList.remove('active')}document.getElementById('bookModal').addEventListener('click',function(e){if(e.target===this)closeModal()});</script>
+
+<!-- Split text + section reveals -->
+<script>
+(function(){
+  if(!window.gsap||!window.ScrollTrigger)return;
+  function split(el){
+    if(el.dataset.splitDone)return;
+    el.dataset.splitDone='1';
+    function proc(n){
+      if(n.nodeType===3){
+        var f=document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(function(w){
+          if(/^\s+$/.test(w)){f.appendChild(document.createTextNode(w));return}
+          var ws=document.createElement('span');ws.style.display='inline-block';ws.style.whiteSpace='nowrap';
+          for(var i=0;i<w.length;i++){var s=document.createElement('span');s.style.display='inline-block';s.style.transform='translateY(110%)';s.style.opacity='0';s.style.transition='transform .9s cubic-bezier(.22,1,.36,1),opacity .8s ease';s.textContent=w[i];ws.appendChild(s)}
+          f.appendChild(ws);
+        });
+        n.parentNode.replaceChild(f,n);
+      }else if(n.nodeType===1){Array.from(n.childNodes).forEach(proc)}
+    }
+    Array.from(el.childNodes).forEach(proc);
+    var chars=el.querySelectorAll('span > span');
+    ScrollTrigger.create({trigger:el,start:'top 88%',once:true,onEnter:function(){chars.forEach(function(c,i){setTimeout(function(){c.style.transform='translateY(0)';c.style.opacity='1'},i*15)})}});
+  }
+  document.querySelectorAll('[data-split]').forEach(split);
+  gsap.utils.toArray('.svc').forEach(function(c){gsap.fromTo(c,{y:24,opacity:0},{y:0,opacity:1,duration:.8,ease:'power3.out',scrollTrigger:{trigger:c,start:'top 90%',once:true}})});
+  gsap.utils.toArray('.wf').forEach(function(c,i){gsap.fromTo(c,{x:-15,opacity:0},{x:0,opacity:1,duration:.55,delay:i*0.07,ease:'power2.out',scrollTrigger:{trigger:'.who-features',start:'top 85%',once:true}})});
+  gsap.utils.toArray('.rev').forEach(function(c,i){gsap.fromTo(c,{y:24,opacity:0},{y:0,opacity:1,duration:.7,delay:i*0.1,ease:'power2.out',scrollTrigger:{trigger:'.rg',start:'top 80%',once:true}})});
+})();
+</script>
+
+<!-- Magnetic -->
+<script>
+(function(){
+  if(window.matchMedia('(pointer:coarse)').matches)return;
+  function bind(el){
+    var inner=el.querySelector('.magnetic-inner');
+    if(!inner){var s=document.createElement('span');s.className='magnetic-inner';while(el.firstChild)s.appendChild(el.firstChild);el.appendChild(s);inner=s}
+    var raf=0,tx=0,ty=0;
+    function apply(){raf=0;el.style.transform='translate('+(tx*.3)+'px,'+(ty*.3)+'px)';inner.style.transform='translate('+(tx*.5)+'px,'+(ty*.5)+'px)'}
+    el.addEventListener('mousemove',function(e){var r=el.getBoundingClientRect();tx=e.clientX-r.left-r.width/2;ty=e.clientY-r.top-r.height/2;if(!raf)raf=requestAnimationFrame(apply)});
+    el.addEventListener('mouseleave',function(){if(raf){cancelAnimationFrame(raf);raf=0}el.style.transform='';inner.style.transform=''});
+  }
+  document.querySelectorAll('.magnetic').forEach(bind);
+})();
+</script>
+
+<!-- Gallery: 3D tilt-card on mousemove (rAF-throttled) -->
+<script>
+(function(){
+  if(window.matchMedia('(pointer:coarse)').matches)return;
+  document.querySelectorAll('.tilt-card').forEach(function(card){
+    var raf=0,tx=0,ty=0;
+    function apply(){
+      raf=0;
+      card.style.transform='perspective(1400px) rotateY('+(tx*8)+'deg) rotateX('+(-ty*8)+'deg) translateZ(0)';
+    }
+    card.addEventListener('mousemove',function(e){
+      var r=card.getBoundingClientRect();
+      tx=(e.clientX-r.left-r.width/2)/(r.width/2);
+      ty=(e.clientY-r.top-r.height/2)/(r.height/2);
+      if(!raf)raf=requestAnimationFrame(apply);
+    });
+    card.addEventListener('mouseleave',function(){
+      if(raf){cancelAnimationFrame(raf);raf=0}
+      card.style.transform='perspective(1400px) rotateY(0deg) rotateX(0deg)';
+    });
+  });
+  // Image fallback
+  document.querySelectorAll('.tilt-bg').forEach(function(bg){
+    var url=(bg.style.backgroundImage||'').replace(/^url\(["']?/,'').replace(/["']?\)$/,'');
+    if(!url)return;
+    var img=new Image();
+    img.onerror=function(){bg.style.display='none';var fb=bg.parentNode.querySelector('.tilt-fallback');if(fb)fb.style.display='flex'};
+    img.src=url;
+  });
+})();
+</script>
+
+<!-- Booking form -->
+<script>
+(function(){
+  var form=document.getElementById('bookingForm'),success=document.getElementById('bookingSuccess');
+  if(!form)return;
+  form.addEventListener('submit',async function(e){
+    e.preventDefault();
+    var btn=form.querySelector('button[type=submit]');
+    var inner=btn.querySelector('.magnetic-inner')||btn;
+    var orig=inner.textContent;inner.textContent='Sending...';btn.disabled=true;
+    try{await fetch('/',{method:'POST',body:new FormData(form)});form.style.display='none';success.style.display='block'}
+    catch(err){inner.textContent=orig;btn.disabled=false;alert('Something went wrong. Call (314) 337-1626.')}
+  });
+})();
+</script>
+
 </body>
 </html>
