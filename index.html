@@ -669,7 +669,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener
   poleGroup.add(new THREE.Mesh(new THREE.CylinderGeometry(1.3,1.3,9,64,1,true),poleMat));
   var glassMat=new THREE.MeshPhysicalMaterial({color:0xffffff,metalness:0,roughness:0.06,transparent:true,opacity:0.14,clearcoat:1,clearcoatRoughness:0.04,envMapIntensity:2.2,side:THREE.DoubleSide});
   poleGroup.add(new THREE.Mesh(new THREE.CylinderGeometry(1.42,1.42,9.2,64,1,true),glassMat));
-  var capMat=new THREE.MeshStandardMaterial({color:0xDDE3EA,roughness:0.12,metalness:0.95,envMapIntensity:1.8});
+  var capMat=new THREE.MeshStandardMaterial({color:0xDDE3EA,roughness:0.1,metalness:1.0,envMapIntensity:2.1});
   var ct=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.42,0.9,40),capMat);ct.position.y=4.85;poleGroup.add(ct);
   var cb=new THREE.Mesh(new THREE.CylinderGeometry(1.42,1.6,0.9,40),capMat);cb.position.y=-4.85;poleGroup.add(cb);
   var finial=new THREE.Mesh(new THREE.SphereGeometry(0.55,24,18),capMat);finial.position.y=5.55;poleGroup.add(finial);
