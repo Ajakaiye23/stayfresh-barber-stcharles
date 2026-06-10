@@ -567,7 +567,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:2.2rem 
 
 <!-- Lenis -->
 <script>
-(function(){if(!window.Lenis||window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+(function(){return;/* Lenis disabled - native scroll */
 var lenis=new Lenis({lerp:0.07,smoothWheel:true,smoothTouch:false,wheelMultiplier:0.85,touchMultiplier:1.5});
 window.__lenis=lenis;
 if(window.gsap&&window.ScrollTrigger){gsap.registerPlugin(ScrollTrigger);lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(function(t){lenis.raf(t*1000)});gsap.ticker.lagSmoothing(0)}else{function r(t){lenis.raf(t);requestAnimationFrame(r)}requestAnimationFrame(r)}
