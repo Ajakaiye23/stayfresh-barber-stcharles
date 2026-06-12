@@ -351,8 +351,8 @@ body.preloading .beat-1 .beat-tag,body.preloading .beat-1 .beat-h1,body.preloadi
 .fg-bottom a{color:var(--lime);text-decoration:none}
 
 /* ===== V2: MOTION & TYPE ===== */
-nav{transition:transform .5s cubic-bezier(.22,1,.36,1),background .3s}
-nav.nav-hidden{transform:translateY(-100%)}
+nav{transition:transform .5s cubic-bezier(.22,1,.36,1),background .3s;top:14px;left:clamp(12px,3vw,34px);right:clamp(12px,3vw,34px);height:62px;border-radius:100px;border:1px solid rgba(184,255,87,.25);background:rgba(10,10,15,.6);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 12px 40px rgba(0,0,0,.45);padding:0 1.6rem 0 2rem}
+nav.nav-hidden{transform:translateY(calc(-100% - 20px))}
 .nav-links a{position:relative}
 .nav-links a::after{content:'';position:absolute;left:0;bottom:-5px;height:1px;width:100%;background:var(--lime);transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.22,1,.36,1)}
 .nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
