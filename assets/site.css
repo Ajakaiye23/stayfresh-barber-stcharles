@@ -1,0 +1,339 @@
+/* site.css — shared layout/behaviour system for the client sites.
+ *
+ * Structure is identical across the portfolio (the Studio Dimension outline);
+ * the personality comes entirely from the custom properties below, which each
+ * page overrides in its own :root block. Nothing here hard-codes a colour.
+ *
+ * Required per site:
+ *   --bg --bg-2 --bg-3   surface ramp (dark or light, either works)
+ *   --fg --fg-dim --fg-faint
+ *   --accent --accent-2
+ *   --hair               hairline rule colour
+ *   --font-display --font-body --font-mono
+ */
+
+:root{
+  --bg:#0B0B0D; --bg-2:#141418; --bg-3:#1C1C21;
+  --fg:#EDE8E0; --fg-dim:#9A948B; --fg-faint:#5B5750;
+  --accent:#D8402F; --accent-2:#C9A227;
+  --hair:rgba(255,255,255,.16);
+  --font-display:'Bodoni Moda',serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,monospace;
+  --pad-x:5vw;
+  --radius:0px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+/* overflow-x must be clipped on BOTH html and body. With it on body alone the
+   document still scrolls sideways — measured 25px of real horizontal scroll on
+   a 390px viewport before this. */
+html{scroll-behavior:auto;overflow-x:hidden}
+body{
+  font-family:var(--font-body);
+  background:var(--bg);color:var(--fg);
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  max-width:100%;
+}
+::selection{background:var(--accent);color:var(--bg)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.mono{font-family:var(--font-mono)}
+.disp{font-family:var(--font-display)}
+
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--bg-3);border-radius:6px}
+::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+.skip{position:absolute;left:-9999px;top:0;z-index:99999;background:var(--accent);color:#fff;padding:12px 20px;font-size:13px}
+.skip:focus{left:12px;top:12px}
+
+/* ============ PRELOADER ============ */
+#intro{position:fixed;inset:0;z-index:11000;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-direction:column}
+#intro .istat{position:absolute;top:30px;left:var(--pad-x);font-family:var(--font-mono);font-size:10.5px;letter-spacing:.24em;color:var(--fg-faint)}
+#intro .ipct{position:absolute;bottom:34px;right:var(--pad-x);font-family:var(--font-mono);font-size:11px;letter-spacing:.24em;color:var(--fg-faint)}
+#intro .iword{font-family:var(--font-display);font-size:clamp(28px,6vw,64px);letter-spacing:.02em;display:flex;overflow:hidden;text-align:center}
+#intro .iword span{display:inline-block;transform:translateY(105%);animation:irise .8s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes irise{to{transform:none}}
+.iline{width:min(420px,64vw);height:1px;background:var(--hair);position:relative;margin-top:26px}
+.iline i{position:absolute;inset:0;background:var(--accent);transform:scaleX(0);transform-origin:left;animation:iload 2.2s cubic-bezier(.6,0,.2,1) forwards}
+@keyframes iload{to{transform:scaleX(1)}}
+.intro-slats{position:absolute;inset:0;display:flex;pointer-events:none}
+.intro-slat{flex:1;background:var(--bg-2);transform:scaleY(0);transform-origin:bottom}
+#intro.done .intro-slat{animation:slatUp .55s cubic-bezier(.7,0,.2,1) forwards}
+@keyframes slatUp{to{transform:scaleY(1)}}
+
+/* ============ CURSOR ============ */
+#ring{position:fixed;top:0;left:0;width:26px;height:26px;border:1px solid var(--fg);border-radius:50%;pointer-events:none;z-index:12000;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s;mix-blend-mode:difference}
+#ring.hov{width:56px;height:56px;background:rgba(255,255,255,.1)}
+@media (hover:none),(max-width:900px){#ring{display:none}}
+
+/* ============ NAV ============ */
+nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:18px var(--pad-x);transition:transform .45s cubic-bezier(.5,0,.2,1);background:linear-gradient(var(--bg),transparent)}
+nav.up{transform:translateY(-105%)}
+nav .nlogo{font-family:var(--font-display);font-size:17px;letter-spacing:.06em}
+nav .nlogo em{font-style:normal;color:var(--accent)}
+nav ul{display:flex;list-style:none;gap:30px}
+nav ul a{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;position:relative;padding:4px 0;color:var(--fg-dim);transition:color .25s}
+nav ul a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--accent);transition:right .3s ease}
+nav ul a:hover{color:var(--fg)}
+nav ul a:hover::after{right:0}
+#menuBtn{display:none;background:none;border:1px solid var(--hair);color:var(--fg);padding:9px 15px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.18em;cursor:pointer}
+#panel{position:fixed;inset:0;z-index:10000;background:var(--bg-2);padding:100px 8vw 40px;display:flex;flex-direction:column;gap:2px;transform:translateY(-102%);transition:transform .55s cubic-bezier(.7,0,.2,1)}
+#panel.open{transform:none}
+#panel a.plink{font-family:var(--font-display);font-size:clamp(28px,8vw,54px);padding:14px 0;border-bottom:1px solid var(--hair);display:flex;align-items:baseline;gap:16px}
+#panel a.plink b{font-family:var(--font-mono);font-size:11px;font-weight:400;color:var(--accent);letter-spacing:.16em}
+#panelClose{position:absolute;top:26px;right:6vw;background:none;border:1px solid var(--hair);color:var(--fg);width:44px;height:44px;font-size:15px;cursor:pointer}
+#panel .psoc{margin-top:auto;display:flex;gap:22px;flex-wrap:wrap;font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;color:var(--fg-dim)}
+
+/* ============ SECTION COMMON ============ */
+section{position:relative;padding:15vh var(--pad-x)}
+.slabel{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.26em;color:var(--accent);display:inline-flex;align-items:center;gap:12px;margin-bottom:28px}
+.slabel::before{content:"";width:34px;height:1px;background:var(--accent)}
+.h-big{font-family:var(--font-display);font-size:clamp(2.4rem,6.4vw,5.6rem);line-height:1.03;letter-spacing:-.01em;font-weight:400}
+.h-it{font-style:italic;color:var(--fg-dim)}
+p.lede{font-size:clamp(15px,1.5vw,18px);line-height:1.8;color:var(--fg-dim);max-width:62ch}
+[data-split] .ch{display:inline-block;transform:translateY(105%);opacity:0}
+[data-split].in .ch{transform:none;opacity:1;transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .5s}
+[data-split] .wd{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em}
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.fade-up.in{opacity:1;transform:none}
+
+.btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.18em;padding:16px 32px;border:1px solid var(--fg);background:transparent;color:var(--fg);cursor:pointer;position:relative;overflow:hidden;transition:color .35s,border-color .35s;border-radius:var(--radius)}
+.btn::before{content:"";position:absolute;inset:0;background:var(--accent);transform:translateY(101%);transition:transform .4s cubic-bezier(.6,0,.2,1);z-index:0}
+.btn:hover{border-color:var(--accent)}
+.btn:hover::before{transform:none}
+.btn>*{position:relative;z-index:1}
+.btn span{position:relative;z-index:1}
+.btn.solid{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn.solid::before{background:var(--fg)}
+.btn.solid:hover{color:var(--bg)}
+
+/* ============ HERO ============ */
+#top{min-height:100svh;display:flex;align-items:center;padding:0 var(--pad-x)}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero-in{position:relative;z-index:2;width:100%}
+/* The 3D hero sits on the right. Cap the text column on desktop so the
+   wordmark and sub can never run underneath it — measured overlaps of up to
+   49% before this. */
+@media(min-width:901px){.hero-in{max-width:54%}}
+.hero-kick{font-family:var(--font-mono);font-size:clamp(10px,1.1vw,12px);letter-spacing:.5em;color:var(--fg-dim);margin-bottom:3vh}
+.wordmark{font-family:var(--font-display);font-size:clamp(2.8rem,13vw,10rem);line-height:.92;letter-spacing:-.02em;font-weight:400}
+.wordmark em{font-style:italic;color:var(--accent)}
+.hero-sub{margin-top:3.4vh;font-size:clamp(14px,1.4vw,17px);color:var(--fg-dim);max-width:46ch;line-height:1.7}
+.hero-cta{margin-top:4vh;display:flex;gap:16px;flex-wrap:wrap}
+.hero-meta{position:absolute;bottom:5vh;right:var(--pad-x);text-align:right;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.2em;color:var(--fg-faint);line-height:2;z-index:2}
+.scrollhint{position:absolute;bottom:5vh;left:var(--pad-x);z-index:2;font-family:var(--font-mono);font-size:10px;letter-spacing:.3em;color:var(--fg-faint);display:flex;align-items:center;gap:12px}
+.scrollhint i{width:44px;height:1px;background:var(--fg-faint);position:relative;overflow:hidden;display:block}
+.scrollhint i::after{content:"";position:absolute;left:-100%;top:0;width:100%;height:100%;background:var(--accent);animation:sweep 2s ease-in-out infinite}
+@keyframes sweep{to{left:100%}}
+
+/* ============ MARQUEE ============ */
+.marq{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);overflow:hidden;padding:16px 0;background:var(--bg-2)}
+.marq .mt{display:flex;gap:44px;white-space:nowrap;width:max-content;animation:mq 34s linear infinite;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.24em;color:var(--fg-dim)}
+.marq b{color:var(--accent);font-weight:400}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ============ SPLIT / STATS ============ */
+.split-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center;margin-top:6vh}
+.split-copy p{margin-bottom:22px}
+.stats{display:flex;gap:44px;margin-top:40px;flex-wrap:wrap}
+.stat .n{font-family:var(--font-display);font-size:clamp(1.9rem,4vw,3.2rem);line-height:1}
+.stat .n em{font-style:normal;color:var(--accent);font-size:.5em;vertical-align:super}
+.stat .t{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.2em;color:var(--fg-faint);margin-top:8px}
+
+/* The decorative line figures were removed — they read as abstract faces
+   rather than as anything meaningful. A split-grid left with a single child
+   collapses to one column so the copy isn't stranded beside empty space. */
+.split-grid:has(> *:only-child){grid-template-columns:1fr}
+
+/* ============ STEP LIST (services / process) ============ */
+.steps{margin-top:6vh;border-top:1px solid var(--hair)}
+.step{display:grid;grid-template-columns:90px 1fr 1.3fr;gap:3vw;padding:34px 0;border-bottom:1px solid var(--hair);align-items:baseline;transition:padding-left .4s}
+.step:hover{padding-left:14px}
+.step .sn{font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;color:var(--accent)}
+.step h3{font-family:var(--font-display);font-size:clamp(1.25rem,2.6vw,2rem);font-weight:400}
+.step p{font-size:14.5px;line-height:1.75;color:var(--fg-dim)}
+.step .tag{font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;color:var(--fg-faint);display:block;margin-top:8px}
+.step .price{font-family:var(--font-display);font-size:1.35rem;color:var(--accent)}
+
+/* ============ TILE GRID (motifs / gallery) ============ */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair);margin-top:7vh;border:1px solid var(--hair)}
+.tile{background:var(--bg);aspect-ratio:1;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:background .4s}
+.tile svg{width:66%;height:66%;overflow:visible}
+.tile .ln{stroke:var(--fg);stroke-width:1.05;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke .4s}
+.tile .fl{fill:var(--fg);transition:fill .4s}
+.tile:hover{background:var(--bg-3)}
+.tile:hover .ln{stroke:var(--accent)}
+.tile:hover .fl{fill:var(--accent)}
+.tile figcaption{position:absolute;left:16px;bottom:14px;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.18em;color:var(--fg-faint);transition:color .4s}
+.tile:hover figcaption{color:var(--fg-dim)}
+.note{margin-top:34px;font-size:13.5px;color:var(--fg-faint);line-height:1.7;max-width:62ch}
+.note a{color:var(--fg-dim);border-bottom:1px solid var(--hair)}
+.note a:hover{color:var(--accent);border-color:var(--accent)}
+
+/* ============ REVIEWS ============ */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:6vh}
+.rev{border:1px solid var(--hair);padding:30px 26px;display:flex;flex-direction:column;gap:16px;transition:border-color .35s,transform .35s;border-radius:var(--radius)}
+.rev:hover{border-color:var(--accent);transform:translateY(-6px)}
+.rev .stars{color:var(--accent-2);letter-spacing:.2em;font-size:13px}
+.rev p{font-size:14.5px;line-height:1.75;color:var(--fg-dim);flex:1;font-style:italic}
+.rev cite{font-family:var(--font-mono);font-size:10px;letter-spacing:.18em;color:var(--fg-faint);font-style:normal}
+.rev-badge{display:inline-flex;align-items:baseline;gap:14px;margin-top:34px;font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;color:var(--fg-dim)}
+.rev-badge b{font-family:var(--font-display);font-size:2rem;font-weight:400;color:var(--accent-2)}
+
+/* ============ INFO / MAP ============ */
+.info-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:6vw;margin-top:6vh;align-items:start}
+.info dt{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.22em;color:var(--fg-faint);margin-top:26px}
+.info dd{font-size:16px;margin-top:8px;line-height:1.6}
+.info dd a:hover{color:var(--accent)}
+.info dt:first-child{margin-top:0}
+.map{border:1px solid var(--hair);aspect-ratio:4/3;position:relative;overflow:hidden;background:var(--bg-2);border-radius:var(--radius)}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map figcaption{position:absolute;left:14px;bottom:12px;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.16em;color:var(--fg-faint)}
+
+/* hours table */
+.hours{margin-top:8px}
+.hours div{display:flex;justify-content:space-between;gap:20px;padding:9px 0;border-bottom:1px solid var(--hair);font-size:14.5px}
+.hours div:last-child{border-bottom:0}
+.hours .d{color:var(--fg-dim)}
+.hours .closed{color:var(--fg-faint)}
+
+/* ============ FORM ============ */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;margin-top:6vh}
+form label{display:block;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.2em;color:var(--fg-faint);margin-bottom:9px}
+form input,form select,form textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--hair);color:var(--fg);padding:12px 0;font-family:var(--font-body);font-size:15px;margin-bottom:26px;transition:border-color .3s}
+form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--accent)}
+form select option{background:var(--bg-2);color:var(--fg)}
+form textarea{resize:vertical;min-height:90px}
+.formnote{font-size:12px;color:var(--fg-faint);margin-top:-10px;margin-bottom:26px;line-height:1.6}
+#formMsg{margin-top:20px;font-family:var(--font-mono);font-size:12px;letter-spacing:.05em;line-height:1.7}
+#formMsg.ok{color:var(--accent-2)}
+#formMsg.err{color:var(--accent)}
+.contact-list{margin-top:32px;border-top:1px solid var(--hair)}
+.contact-list a,.contact-list div{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:18px 0;border-bottom:1px solid var(--hair);font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;transition:padding-left .35s,color .35s}
+.contact-list a:hover{padding-left:12px;color:var(--accent)}
+.contact-list b{font-weight:400;color:var(--fg-faint);font-size:9.5px;letter-spacing:.2em}
+
+/* ============ FOOTER ============ */
+footer{padding:9vh var(--pad-x) 34px;border-top:1px solid var(--hair)}
+.fmark{font-family:var(--font-display);font-size:clamp(2.6rem,14vw,11rem);line-height:.85;color:transparent;-webkit-text-stroke:1px var(--fg-faint);transition:color .6s,-webkit-text-stroke-color .6s;cursor:default;word-break:break-word}
+.fmark:hover{color:var(--accent);-webkit-text-stroke-color:var(--accent)}
+.fgrid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;margin-top:6vh}
+.fcol h3{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.22em;color:var(--fg-faint);margin-bottom:16px;font-weight:400}
+.fcol a,.fcol p{display:block;font-size:13.5px;color:var(--fg-dim);margin-bottom:9px;line-height:1.6}
+.fcol a:hover{color:var(--accent)}
+.fbot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:7vh;padding-top:24px;border-top:1px solid var(--hair);font-family:var(--font-mono);font-size:9.5px;letter-spacing:.16em;color:var(--fg-faint)}
+.fbot a{border-bottom:1px solid var(--hair)}
+.fbot a:hover{color:var(--accent)}
+
+
+/* ============ OPEN / CLOSED PILL ============ */
+.openpill{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  padding:6px 11px;border:1px solid var(--hair);border-radius:999px;
+  color:var(--fg-dim);white-space:nowrap;line-height:1;
+}
+.openpill::before{
+  content:"";width:6px;height:6px;border-radius:50%;
+  background:var(--fg-faint);flex:none;
+}
+.openpill.is-open{color:var(--fg)}
+.openpill.is-open::before{background:#37B24D;box-shadow:0 0 0 3px rgba(55,178,77,.18)}
+.openpill.is-shut::before{background:#C0392B}
+nav .openpill{margin-right:14px}
+@media(max-width:900px){nav .openpill{display:none}}
+.fbot .openpill{border-color:transparent;padding-left:0}
+
+/* ============ FAQ ============ */
+.faqs{margin-top:6vh;border-top:1px solid var(--hair)}
+.faq{border-bottom:1px solid var(--hair)}
+.faq summary{
+  list-style:none;cursor:pointer;padding:24px 40px 24px 0;position:relative;
+  font-family:var(--font-display);font-size:clamp(1.05rem,2vw,1.5rem);
+  font-weight:400;line-height:1.35;transition:color .25s;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--accent)}
+.faq summary::after{
+  content:"";position:absolute;right:6px;top:50%;width:13px;height:13px;
+  border-right:1.5px solid var(--accent);border-bottom:1.5px solid var(--accent);
+  transform:translateY(-70%) rotate(45deg);transition:transform .3s;
+}
+.faq[open] summary::after{transform:translateY(-25%) rotate(-135deg)}
+.faq[open] summary{color:var(--accent)}
+.faq-a{padding:0 6vw 26px 0;font-size:15px;line-height:1.8;color:var(--fg-dim);max-width:64ch}
+.faq-a a{color:var(--fg);border-bottom:1px solid var(--accent)}
+.faq-a a:hover{color:var(--accent)}
+@media(max-width:900px){
+  .faq-a{padding-right:0}
+  /* Answers carry phone and booking links; inline text is a 20px tap target,
+     so give them their own block box and pad it to a thumb-sized 40px. */
+  .faq-a a{display:inline-block;padding:10px 0}
+}
+
+/* ============ PRINT ============
+   People genuinely print these — hours to stick on a fridge, a quote to take
+   to a job. Strip the furniture, force legible black-on-white, and expand the
+   FAQ answers so nothing is hidden behind a disclosure widget. */
+@media print{
+  #intro,#ring,#grain,#progress,nav,#panel,.scrollhint,.marq,
+  #heroCanvas,.hero-cta,.btn,form,.tiles{display:none !important}
+  html,body{background:#fff !important;color:#000 !important}
+  *{color:#000 !important;box-shadow:none !important}
+  section{padding:12pt 0 !important;page-break-inside:avoid}
+  .wordmark,.h-big{font-size:22pt !important;line-height:1.1 !important}
+  .hero-in{max-width:100% !important}
+  .fmark{display:none}
+  .slabel,.hero-kick{font-size:8pt !important;letter-spacing:.14em !important}
+  p,li,dd,.lede,.step p{font-size:10.5pt !important;line-height:1.5 !important}
+  .faq[open] .faq-a,.faq .faq-a{display:block !important}
+  .faq summary::after{display:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:8pt;word-break:break-all}
+  a[href^="tel:"]::after,a[href^="sms:"]::after,a[href^="#"]::after{content:""}
+  .fade-up,[data-split] .ch{opacity:1 !important;transform:none !important}
+  .info-grid,.split-grid,.form-grid{grid-template-columns:1fr !important}
+  .map{display:none}
+}
+
+#progress{position:fixed;top:0;left:0;height:2px;background:var(--accent);z-index:10001;width:0}
+#grain{position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:.03;mix-blend-mode:overlay}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:900px){
+  nav ul{display:none}
+  #menuBtn{display:block}
+  section{padding:11vh 6vw}
+  .split-grid,.info-grid,.form-grid{grid-template-columns:1fr;gap:7vh}
+  .tiles,.rev-grid{grid-template-columns:repeat(2,1fr)}
+  .step{grid-template-columns:56px 1fr;row-gap:12px}
+  .step p{grid-column:2}
+  .hero-meta{display:none}
+  #heroCanvas{opacity:.45}
+}
+@media(max-width:560px){
+  .tiles,.rev-grid{grid-template-columns:1fr}
+  .stats{gap:26px}
+}
+/* Comfortable touch targets. Footer and utility links render ~20px tall from
+   line-height alone, well under the ~44px guidance. */
+@media(max-width:900px){
+  .fcol a,.fcol p{padding:10px 0;margin-bottom:0}
+  .contact-list a,.contact-list div{padding:22px 0}
+  .fbot a{display:inline-block;padding:10px 0}
+  nav .nlogo{display:inline-flex;align-items:center;min-height:44px}
+  .note a,.work-note a{display:inline-block;padding:6px 0}
+  #panel .psoc a{padding:12px 0}
+  /* phone/booking links inside the info list render ~20px tall inline */
+  .info dd a{display:inline-block;padding:8px 0}
+  .formnote a{display:inline-block;padding:8px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  [data-split] .ch{transform:none;opacity:1}
+  .fade-up{opacity:1;transform:none}
+  #intro{display:none}
+  .dr{stroke-dashoffset:0 !important}
+}
